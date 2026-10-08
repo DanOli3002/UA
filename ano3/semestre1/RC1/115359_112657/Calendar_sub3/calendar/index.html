@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar.pt - Calendários de Nossa Senhora de Fátima</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+
+            color: #333;
+        }
+        header {
+            background-color: #0056a4;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #003d73;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .hero {
+            text-align: center;
+            background-size: cover;
+            color: white;
+            padding: 3rem 1rem;
+            border-radius: 8px;
+            background-color: #003d73;
+        }
+        .hero h2 {
+            margin: 0 0 1rem;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .product h3 {
+            margin: 1rem 0 0.5rem;
+        }
+        .product p {
+            margin: 0.5rem 0;
+            color: #666;
+        }
+        .product button {
+            background-color: #0056a4;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #003d73;
+        }
+        footer {
+            background-color: #003d73;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calendar.pt</h1>
+        <p>Os mais belos calendários de Nossa Senhora de Fátima</p>
+    </header>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="sobre.html">Sobre Nós</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="container">
+        <section class="hero">
+            <h2>Descubra os nossos calendários exclusivos</h2>
+            <p>Leve a proteção de Nossa Senhora de Fátima para todos os meses do ano.</p>
+        </section>
+        <section id="produtos" class="products">
+            <div class="product">
+                <img src="images/calendario.png" alt="Calendário 2024">
+                <h3>Calendário 2024</h3>
+                <p>Deixe a fé guiar o seu ano.</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="images/calendario.png" alt="Calendário de Mesa">
+                <h3>Calendário de Mesa</h3>
+                <p>Perfeito para o seu escritório.</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="images/calendario.png" alt="Calendário Personalizado">
+                <h3>Calendário Personalizado</h3>
+                <p>Adapte-o às suas necessidades.</p>
+                <button>Comprar</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Calendar.pt - Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+
+</html>
+

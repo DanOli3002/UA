@@ -1,0 +1,7 @@
+uBridge version 0.9.16 running with Npcap version 1.72, based on libpcap version 1.10.2-PRE-GIT
+Hypervisor TCP control server started (IP 127.0.0.1 port 62123).
+UDP tunnel connecting from local port 20000 to IPv4 addresss 127.0.0.1 on port 20001
+nio_ethernet_open: unable to open device '\Device\NPF_{EAB165E6-2B2A-4544-8045-93163BA65384}': \Device\NPF_{EAB165E6-2B2A-4544-8045-93163BA65384}: failed to set hardware filter to promiscuous mode: Um dispositivo ligado ao sistema não está a funcionar.  (31)
+Hypervisor: closing control sockets.
+Hypervisor: closing remote client connections.
+Hypervisor: stopped.

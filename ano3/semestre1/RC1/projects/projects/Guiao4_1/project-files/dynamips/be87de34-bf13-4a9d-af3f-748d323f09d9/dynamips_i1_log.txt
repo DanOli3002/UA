@@ -1,0 +1,23 @@
+Oct 29 17:42:54.734 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Oct 29 17:42:54.739 HYPERVISOR: Started on IP = localhost, TCP port = 64290.
+Oct 29 17:42:54.934 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 29 17:42:54.934 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ruben\GNS3\projects\Guiao4_1\project-files\dynamips 
+Oct 29 17:42:54.991 GENERAL: working_dir=C:\Users\Ruben\GNS3\projects\Guiao4_1\project-files\dynamips
+Oct 29 17:42:54.991 HYPERVISOR: exec_cmd: ethsw create Switch1 
+Oct 29 17:42:56.297 HYPERVISOR: exec_cmd: nio create_udp udp-66c8c377-118e-42dc-acca-d2e3e7b17bae 20001 127.0.0.1 20000 
+Oct 29 17:42:56.297 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-66c8c377-118e-42dc-acca-d2e3e7b17bae 
+Oct 29 17:42:56.322 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-66c8c377-118e-42dc-acca-d2e3e7b17bae 1 
+Oct 29 17:42:56.364 HYPERVISOR: exec_cmd: nio create_udp udp-1fbc70f6-569b-41aa-8f46-e93855c4139a 20003 127.0.0.1 20002 
+Oct 29 17:42:56.364 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-1fbc70f6-569b-41aa-8f46-e93855c4139a 
+Oct 29 17:42:56.380 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-1fbc70f6-569b-41aa-8f46-e93855c4139a 1 
+Oct 29 17:42:56.564 HYPERVISOR: exec_cmd: nio create_udp udp-ab5d0519-28e7-4ac5-bc07-ee1cfe170834 20008 127.0.0.1 20009 
+Oct 29 17:42:56.564 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-ab5d0519-28e7-4ac5-bc07-ee1cfe170834 
+Oct 29 17:42:56.579 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-ab5d0519-28e7-4ac5-bc07-ee1cfe170834 1 
+Oct 29 18:12:22.653 HYPERVISOR: exec_cmd: nio bind_filter udp-66c8c377-118e-42dc-acca-d2e3e7b17bae 2 capture 
+Oct 29 18:12:22.653 HYPERVISOR: exec_cmd: nio setup_filter udp-66c8c377-118e-42dc-acca-d2e3e7b17bae 2 en10mb C:\Users\Ruben\GNS3\projects\Guiao4_1\project-files\captures\PC1_Ethernet0_to_Switch1_Ethernet0.pcap 
+Oct 29 18:34:31.405 HYPERVISOR: exec_cmd: nio bind_filter udp-1fbc70f6-569b-41aa-8f46-e93855c4139a 2 capture 
+Oct 29 18:34:31.407 HYPERVISOR: exec_cmd: nio setup_filter udp-1fbc70f6-569b-41aa-8f46-e93855c4139a 2 en10mb C:\Users\Ruben\GNS3\projects\Guiao4_1\project-files\captures\PC2_Ethernet0_to_Switch1_Ethernet1.pcap 
+Oct 29 20:23:45.457 HYPERVISOR: exec_cmd: ethsw delete Switch1 
+Oct 29 20:23:45.552 HYPERVISOR: exec_cmd: hypervisor stop 
+Oct 29 20:23:45.816 HYPERVISOR: Stopped.
+Oct 29 20:23:45.817 GENERAL: reset done.

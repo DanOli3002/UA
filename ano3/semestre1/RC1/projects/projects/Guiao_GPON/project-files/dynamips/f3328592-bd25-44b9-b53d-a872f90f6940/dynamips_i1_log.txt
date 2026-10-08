@@ -1,0 +1,29 @@
+Nov 15 14:34:06.471 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Nov 15 14:34:06.471 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 60752.
+Nov 15 14:34:06.729 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 15 14:34:06.729 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ruben\GNS3\projects\Guiao_GPON\project-files\dynamips 
+Nov 15 14:34:06.748 GENERAL: working_dir=C:\Users\Ruben\GNS3\projects\Guiao_GPON\project-files\dynamips
+Nov 15 14:34:06.748 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ruben\GNS3\projects\Guiao_GPON\project-files\dynamips\f3328592-bd25-44b9-b53d-a872f90f6940 
+Nov 15 14:34:06.748 GENERAL: working_dir=C:\Users\Ruben\GNS3\projects\Guiao_GPON\project-files\dynamips\f3328592-bd25-44b9-b53d-a872f90f6940
+Nov 15 14:34:06.748 HYPERVISOR: exec_cmd: vm create R1 1 c7200 
+Nov 15 14:34:06.758 VM: VM R1 created.
+Nov 15 14:34:06.760 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5000 
+Nov 15 14:34:06.760 HYPERVISOR: exec_cmd: c7200 get_mac_addr R1 
+Nov 15 14:34:06.760 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 15 14:34:06.760 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-FE 
+Nov 15 14:34:06.760 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/Ruben/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Nov 15 14:34:06.760 HYPERVISOR: exec_cmd: vm set_exec_area R1 64 
+Nov 15 14:34:06.760 HYPERVISOR: exec_cmd: vm set_ram R1 512 
+Nov 15 14:34:06.760 HYPERVISOR: exec_cmd: vm set_nvram R1 512 
+Nov 15 14:34:06.760 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Nov 15 14:34:06.760 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 15 14:34:06.760 HYPERVISOR: exec_cmd: vm slot_add_binding R1 1 0 PA-2FE-TX 
+Nov 15 14:34:06.760 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 15 14:34:06.768 HYPERVISOR: exec_cmd: vm slot_add_binding R1 2 0 PA-2FE-TX 
+Nov 15 14:34:06.829 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/Ruben/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Nov 15 14:34:38.949 HYPERVISOR: exec_cmd: nio create_udp udp-11701e23-b9bd-41bc-b6ea-19b54d7695e9 20002 127.0.0.1 20003 
+Nov 15 14:34:39.241 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-11701e23-b9bd-41bc-b6ea-19b54d7695e9 
+Nov 15 14:34:39.241 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 15 14:43:59.708 HYPERVISOR: Stopped.
+Nov 15 14:43:59.709 VM: VM R1 destroyed.
+Nov 15 14:43:59.710 GENERAL: reset done.

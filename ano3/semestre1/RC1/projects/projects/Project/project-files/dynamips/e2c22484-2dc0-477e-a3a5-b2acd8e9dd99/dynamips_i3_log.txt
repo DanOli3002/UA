@@ -1,0 +1,50 @@
+Nov 29 17:36:23.403 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Nov 29 17:36:23.404 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 55335.
+Nov 29 17:36:23.637 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 29 17:36:23.637 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ruben\GNS3\projects\Project\project-files\dynamips 
+Nov 29 17:36:23.637 GENERAL: working_dir=C:\Users\Ruben\GNS3\projects\Project\project-files\dynamips
+Nov 29 17:36:23.637 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ruben\GNS3\projects\Project\project-files\dynamips\e3afce60-9101-4e47-86ec-2d3c66d6978c 
+Nov 29 17:36:23.639 GENERAL: working_dir=C:\Users\Ruben\GNS3\projects\Project\project-files\dynamips\e3afce60-9101-4e47-86ec-2d3c66d6978c
+Nov 29 17:36:23.640 HYPERVISOR: exec_cmd: vm create NEWNET 1 c7200 
+Nov 29 17:36:23.641 VM: VM NEWNET created.
+Nov 29 17:36:23.642 HYPERVISOR: exec_cmd: vm set_con_tcp_port NEWNET 5003 
+Nov 29 17:36:23.642 HYPERVISOR: exec_cmd: c7200 get_mac_addr NEWNET 
+Nov 29 17:36:23.642 HYPERVISOR: exec_cmd: vm get_status NEWNET 
+Nov 29 17:36:23.643 HYPERVISOR: exec_cmd: vm slot_add_binding NEWNET 0 0 C7200-IO-FE 
+Nov 29 17:36:23.644 HYPERVISOR: exec_cmd: vm set_disk0 NEWNET 0 
+Nov 29 17:36:23.645 HYPERVISOR: exec_cmd: vm set_exec_area NEWNET 64 
+Nov 29 17:36:23.646 HYPERVISOR: exec_cmd: vm set_ios NEWNET C:/Users/Ruben/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Nov 29 17:36:23.646 HYPERVISOR: exec_cmd: c7200 set_mac_addr NEWNET ca01.0bbc.0000 
+Nov 29 17:36:23.647 HYPERVISOR: exec_cmd: vm set_nvram NEWNET 512 
+Nov 29 17:36:23.647 HYPERVISOR: exec_cmd: vm set_ram NEWNET 512 
+Nov 29 17:36:23.648 HYPERVISOR: exec_cmd: vm get_status NEWNET 
+Nov 29 17:36:23.648 HYPERVISOR: exec_cmd: vm slot_add_binding NEWNET 1 0 PA-2FE-TX 
+Nov 29 17:36:23.649 HYPERVISOR: exec_cmd: vm get_status NEWNET 
+Nov 29 17:36:23.649 HYPERVISOR: exec_cmd: vm slot_add_binding NEWNET 2 0 PA-2FE-TX 
+Nov 29 17:36:23.651 HYPERVISOR: exec_cmd: vm set_con_tcp_port NEWNET 5003 
+Nov 29 17:36:33.399 HYPERVISOR: exec_cmd: nio create_udp udp-b86f924f-a1bc-4876-afad-820b7728e6ef 20002 127.0.0.1 20003 
+Nov 29 17:36:33.656 HYPERVISOR: exec_cmd: vm slot_add_nio_binding NEWNET 0 0 udp-b86f924f-a1bc-4876-afad-820b7728e6ef 
+Nov 29 17:36:33.656 HYPERVISOR: exec_cmd: vm get_status NEWNET 
+Nov 29 17:36:34.236 HYPERVISOR: exec_cmd: nio create_udp udp-7617f8fa-72ca-489e-bd33-62e30f9e09d8 20016 127.0.0.1 20017 
+Nov 29 17:36:34.240 HYPERVISOR: exec_cmd: vm slot_add_nio_binding NEWNET 2 0 udp-7617f8fa-72ca-489e-bd33-62e30f9e09d8 
+Nov 29 17:36:34.241 HYPERVISOR: exec_cmd: vm get_status NEWNET 
+Nov 29 17:36:35.081 HYPERVISOR: exec_cmd: nio create_udp udp-e2685e37-c76d-4170-8bc3-b345807e605e 20036 127.0.0.1 20037 
+Nov 29 17:36:35.085 HYPERVISOR: exec_cmd: vm slot_add_nio_binding NEWNET 1 0 udp-e2685e37-c76d-4170-8bc3-b345807e605e 
+Nov 29 17:36:35.085 HYPERVISOR: exec_cmd: vm get_status NEWNET 
+Nov 29 17:36:52.938 HYPERVISOR: exec_cmd: vm set_ios NEWNET C:/Users/Ruben/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Nov 29 17:36:59.027 HYPERVISOR: exec_cmd: vm set_ios NEWNET C:/Users/Ruben/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Nov 29 17:37:06.088 HYPERVISOR: exec_cmd: vm set_ios NEWNET C:/Users/Ruben/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Nov 29 17:42:32.965 HYPERVISOR: exec_cmd: vm set_ios NEWNET C:/Users/Ruben/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Nov 29 17:42:35.507 HYPERVISOR: exec_cmd: vm set_ios NEWNET C:/Users/Ruben/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Nov 29 17:42:36.891 HYPERVISOR: exec_cmd: vm set_ios NEWNET C:/Users/Ruben/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Nov 29 17:42:37.645 HYPERVISOR: exec_cmd: vm set_ios NEWNET C:/Users/Ruben/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Nov 29 17:43:02.452 HYPERVISOR: exec_cmd: vm set_ios NEWNET C:/Users/Ruben/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Nov 29 17:49:53.296 HYPERVISOR: exec_cmd: vm get_status NEWNET 
+Nov 29 17:49:53.298 HYPERVISOR: exec_cmd: vm extract_config NEWNET 
+Nov 29 17:49:54.672 HYPERVISOR: exec_cmd: vm get_status NEWNET 
+Nov 29 17:49:54.672 HYPERVISOR: exec_cmd: vm extract_config NEWNET 
+Nov 29 17:49:54.673 HYPERVISOR: exec_cmd: vm delete NEWNET 
+Nov 29 17:49:54.673 VM: VM NEWNET destroyed.
+Nov 29 17:49:54.674 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 29 17:49:54.705 HYPERVISOR: Stopped.
+Nov 29 17:49:54.706 GENERAL: reset done.

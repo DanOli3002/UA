@@ -1,0 +1,19 @@
+Dec 01 22:23:35.047 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Dec 01 22:23:35.048 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 61880.
+Dec 01 22:23:35.270 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 01 22:23:35.271 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ruben\GNS3\projects\Project\project-files\dynamips 
+Dec 01 22:23:35.334 GENERAL: working_dir=C:\Users\Ruben\GNS3\projects\Project\project-files\dynamips
+Dec 01 22:23:35.335 HYPERVISOR: exec_cmd: ethsw create NewNetSw 
+Dec 01 22:23:45.302 HYPERVISOR: exec_cmd: nio create_udp udp-34def357-3137-4bf2-bcf3-2faa9308a464 20001 127.0.0.1 20000 
+Dec 01 22:23:45.303 HYPERVISOR: exec_cmd: ethsw add_nio NewNetSw udp-34def357-3137-4bf2-bcf3-2faa9308a464 
+Dec 01 22:23:45.309 HYPERVISOR: exec_cmd: ethsw set_access_port NewNetSw udp-34def357-3137-4bf2-bcf3-2faa9308a464 5 
+Dec 01 22:23:45.379 HYPERVISOR: exec_cmd: nio create_udp udp-32e2e2c9-c989-4912-998d-159fc8e0213d 20003 127.0.0.1 20002 
+Dec 01 22:23:45.381 HYPERVISOR: exec_cmd: ethsw add_nio NewNetSw udp-32e2e2c9-c989-4912-998d-159fc8e0213d 
+Dec 01 22:23:45.402 HYPERVISOR: exec_cmd: ethsw set_access_port NewNetSw udp-32e2e2c9-c989-4912-998d-159fc8e0213d 4 
+Dec 01 22:23:49.708 HYPERVISOR: exec_cmd: nio create_udp udp-5ab2b68d-38c3-4d1b-b93c-89d4b6ce646d 20073 127.0.0.1 20072 
+Dec 01 22:23:49.708 HYPERVISOR: exec_cmd: ethsw add_nio NewNetSw udp-5ab2b68d-38c3-4d1b-b93c-89d4b6ce646d 
+Dec 01 22:23:49.741 HYPERVISOR: exec_cmd: ethsw set_dot1q_port NewNetSw udp-5ab2b68d-38c3-4d1b-b93c-89d4b6ce646d 1 
+Dec 01 22:29:28.335 HYPERVISOR: exec_cmd: ethsw delete NewNetSw 
+Dec 01 22:29:28.404 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 01 22:29:28.755 HYPERVISOR: Stopped.
+Dec 01 22:29:28.756 GENERAL: reset done.

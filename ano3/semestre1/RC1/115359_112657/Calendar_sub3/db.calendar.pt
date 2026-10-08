@@ -1,0 +1,21 @@
+$TTL 604800
+$ORIGIN calendar.pt.
+@	IN	SOA	ns1.calendar.pt.	adm.calendar.pt. (
+			2	; Serial
+			604800	; Refresh
+			86400	; Retry
+			2419200	; Expire
+			604800)	; Negative Cache TTL
+	IN	NS	ns1.calendar.pt.
+ns1	IN	A	203.153.151.254
+@	IN	A	203.153.151.254
+www	IN	A	203.153.151.254
+siteA	IN	A	203.153.151.254
+January	IN	A	172.29.12.2 
+March	IN	A	203.153.151.226
+April	IN	A	172.29.13.2
+June	IN	A	203.153.151.194
+July	IN	A	172.29.13.130
+September	IN	A	203.153.151.130
+October	IN	A	172.29.13.194
+December	IN	A	203.153.151.242

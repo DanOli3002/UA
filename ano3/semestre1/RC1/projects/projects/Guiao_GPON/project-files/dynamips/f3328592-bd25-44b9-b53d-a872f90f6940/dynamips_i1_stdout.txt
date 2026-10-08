@@ -1,0 +1,16 @@
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Ruben\GNS3\projects\Guiao_GPON\project-files\dynamips
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Ruben/GNS3/projects/Guiao_GPON/project-files/dynamips
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+Cisco Router Simulation Platform (version 0.2.17-x86/Windows stable)
+Copyright (c) 2005-2011 Christophe Fillot.
+Build date: Aug 28 2017 08:26:42
+
+Log file: writing to dynamips_i1_log.txt
+Hypervisor TCP control server started (IP 127.0.0.1 port 60752).
+Hypervisor: closing control sockets.
+Hypervisor: closing remote client connections.
+Shutdown in progress...
+Shutdown completed.

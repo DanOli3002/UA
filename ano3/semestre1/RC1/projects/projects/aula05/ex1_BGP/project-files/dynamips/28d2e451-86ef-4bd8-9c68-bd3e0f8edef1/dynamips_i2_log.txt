@@ -1,0 +1,80 @@
+Apr 26 11:05:16.278 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Apr 26 11:05:16.278 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 58117.
+Apr 26 11:05:16.775 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 26 11:05:16.775 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ruben\GNS3\projects\aula05\ex1_BGP\project-files\dynamips 
+Apr 26 11:05:16.775 GENERAL: working_dir=C:\Users\Ruben\GNS3\projects\aula05\ex1_BGP\project-files\dynamips
+Apr 26 11:05:16.775 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ruben\GNS3\projects\aula05\ex1_BGP\project-files\dynamips\1f32a09d-e484-4a9f-882b-89476e09d793 
+Apr 26 11:05:16.775 GENERAL: working_dir=C:\Users\Ruben\GNS3\projects\aula05\ex1_BGP\project-files\dynamips\1f32a09d-e484-4a9f-882b-89476e09d793
+Apr 26 11:05:16.775 HYPERVISOR: exec_cmd: vm create R1 1 c7200 
+Apr 26 11:05:16.783 VM: VM R1 created.
+Apr 26 11:05:16.783 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5001 
+Apr 26 11:05:16.783 HYPERVISOR: exec_cmd: c7200 get_mac_addr R1 
+Apr 26 11:05:16.783 HYPERVISOR: exec_cmd: vm get_status R1 
+Apr 26 11:05:16.783 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-FE 
+Apr 26 11:05:16.783 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Apr 26 11:05:16.783 HYPERVISOR: exec_cmd: vm set_exec_area R1 64 
+Apr 26 11:05:16.783 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/Ruben/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Apr 26 11:05:16.783 HYPERVISOR: exec_cmd: c7200 set_mac_addr R1 ca01.3e90.0000 
+Apr 26 11:05:16.783 HYPERVISOR: exec_cmd: vm set_nvram R1 512 
+Apr 26 11:05:16.783 HYPERVISOR: exec_cmd: vm set_ram R1 512 
+Apr 26 11:05:16.791 HYPERVISOR: exec_cmd: vm get_status R1 
+Apr 26 11:05:16.792 HYPERVISOR: exec_cmd: vm slot_remove_binding R1 0 0 
+Apr 26 11:05:16.792 HYPERVISOR: exec_cmd: vm get_status R1 
+Apr 26 11:05:16.792 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-2FE 
+Apr 26 11:05:16.792 HYPERVISOR: exec_cmd: vm get_status R1 
+Apr 26 11:05:16.792 HYPERVISOR: exec_cmd: vm slot_add_binding R1 1 0 PA-2FE-TX 
+Apr 26 11:05:16.792 HYPERVISOR: exec_cmd: vm get_status R1 
+Apr 26 11:05:16.792 HYPERVISOR: exec_cmd: vm slot_add_binding R1 2 0 PA-2FE-TX 
+Apr 26 11:05:20.445 HYPERVISOR: exec_cmd: nio create_udp udp-1cecfe21-cf60-4c6e-8b44-02227ea01272 20002 127.0.0.1 20003 
+Apr 26 11:05:20.815 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 1 udp-1cecfe21-cf60-4c6e-8b44-02227ea01272 
+Apr 26 11:05:20.815 HYPERVISOR: exec_cmd: vm get_status R1 
+Apr 26 11:05:20.856 HYPERVISOR: exec_cmd: nio create_udp udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 20006 127.0.0.1 20007 
+Apr 26 11:05:20.856 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 
+Apr 26 11:05:20.864 HYPERVISOR: exec_cmd: vm get_status R1 
+Apr 26 11:06:15.096 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Apr 26 11:06:15.096 VM: VM Ghost created.
+Apr 26 11:06:15.096 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/Ruben/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Apr 26 11:06:15.096 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Apr 26 11:06:15.112 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost C:\Users\Ruben\GNS3\projects\aula05\ex1_BGP\project-files\dynamips\c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Apr 26 11:06:15.112 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Apr 26 11:06:15.112 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Apr 26 11:06:15.190 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Apr 26 11:06:15.190 HYPERVISOR: exec_cmd: vm start Ghost 
+Apr 26 11:06:15.708 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Apr 26 11:06:15.708 HYPERVISOR: exec_cmd: vm stop Ghost 
+Apr 26 11:06:15.897 VM: VM Ghost shutdown.
+Apr 26 11:06:15.897 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Apr 26 11:06:15.897 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Apr 26 11:06:15.897 VM: VM Ghost destroyed.
+Apr 26 11:06:15.912 HYPERVISOR: exec_cmd: vm set_ghost_status R1 2 
+Apr 26 11:06:15.912 HYPERVISOR: exec_cmd: vm set_ghost_file R1 C:\Users\Ruben\GNS3\projects\aula05\ex1_BGP\project-files\dynamips\c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Apr 26 11:06:15.912 HYPERVISOR: exec_cmd: vm get_status R1 
+Apr 26 11:06:15.912 HYPERVISOR: exec_cmd: vm set_config R1 configs\i1_startup-config.cfg configs\i1_private-config.cfg 
+Apr 26 11:06:15.912 HYPERVISOR: exec_cmd: vm start R1 
+Apr 26 11:06:46.317 HYPERVISOR: exec_cmd: vm extract_config R1 
+Apr 26 11:51:03.291 HYPERVISOR: exec_cmd: nio bind_filter udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 2 capture 
+Apr 26 11:51:03.291 HYPERVISOR: exec_cmd: nio setup_filter udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 2 en10mb C:\Users\Ruben\GNS3\projects\aula05\ex1_BGP\project-files\captures\R1_FastEthernet00_to_R2A_FastEthernet00.pcap 
+Apr 26 11:53:50.146 HYPERVISOR: exec_cmd: nio unbind_filter udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 2 
+Apr 26 11:54:39.254 HYPERVISOR: exec_cmd: nio bind_filter udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 2 capture 
+Apr 26 11:54:39.254 HYPERVISOR: exec_cmd: nio setup_filter udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 2 en10mb C:\Users\Ruben\GNS3\projects\aula05\ex1_BGP\project-files\captures\R1_FastEthernet00_to_R2A_FastEthernet00.pcap 
+Apr 26 11:55:22.690 HYPERVISOR: exec_cmd: nio unbind_filter udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 2 
+Apr 26 11:55:27.195 HYPERVISOR: exec_cmd: nio bind_filter udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 2 capture 
+Apr 26 11:55:27.195 HYPERVISOR: exec_cmd: nio setup_filter udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 2 en10mb C:\Users\Ruben\GNS3\projects\aula05\ex1_BGP\project-files\captures\R1_FastEthernet00_to_R2A_FastEthernet00.pcap 
+Apr 26 11:55:54.475 HYPERVISOR: exec_cmd: nio unbind_filter udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 2 
+Apr 26 11:56:00.432 HYPERVISOR: exec_cmd: nio bind_filter udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 2 capture 
+Apr 26 11:56:00.432 HYPERVISOR: exec_cmd: nio setup_filter udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 2 en10mb C:\Users\Ruben\GNS3\projects\aula05\ex1_BGP\project-files\captures\R1_FastEthernet00_to_R2A_FastEthernet00.pcap 
+Apr 26 11:57:28.608 HYPERVISOR: exec_cmd: nio unbind_filter udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 2 
+Apr 26 11:57:33.100 HYPERVISOR: exec_cmd: nio bind_filter udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 2 capture 
+Apr 26 11:57:33.100 HYPERVISOR: exec_cmd: nio setup_filter udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 2 en10mb C:\Users\Ruben\GNS3\projects\aula05\ex1_BGP\project-files\captures\R1_FastEthernet00_to_R2A_FastEthernet00.pcap 
+Apr 26 12:15:11.790 HYPERVISOR: exec_cmd: nio unbind_filter udp-b77f7555-6a3a-40c6-b3ee-72368875d9f1 2 
+Apr 26 12:56:36.150 HYPERVISOR: exec_cmd: vm get_status R1 
+Apr 26 12:56:36.154 HYPERVISOR: exec_cmd: vm stop R1 
+Apr 26 12:56:36.290 VM: VM R1 shutdown.
+Apr 26 12:56:36.292 HYPERVISOR: exec_cmd: vm extract_config R1 
+Apr 26 12:56:36.740 HYPERVISOR: exec_cmd: vm get_status R1 
+Apr 26 12:56:36.741 HYPERVISOR: exec_cmd: vm extract_config R1 
+Apr 26 12:56:36.746 HYPERVISOR: exec_cmd: vm delete R1 
+Apr 26 12:56:36.746 VM: VM R1 destroyed.
+Apr 26 12:56:36.748 HYPERVISOR: exec_cmd: hypervisor stop 
+Apr 26 12:56:36.806 HYPERVISOR: Stopped.
+Apr 26 12:56:36.806 GENERAL: reset done.

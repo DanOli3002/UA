@@ -1,0 +1,4 @@
+# Large simulator images and packet captures
+**/*.pcap
+**/*.ghost
+**/*_iomem
