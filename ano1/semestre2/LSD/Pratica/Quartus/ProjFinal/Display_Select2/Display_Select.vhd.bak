@@ -1,0 +1,40 @@
+entity Display_Select is
+	port (
+		Value_time  : in  std_logic_vector(5 downto 0);
+		Enable_timer: in  std_logic;
+		Display1    : out std_logic_vector(2 downto 0); -- Dígitos das dezenas
+		Display0    : out std_logic_vector(2 downto 0); -- Dígitos das unidades
+		Dec         : out std_logic_vector(6 downto 0)
+	);
+end entity Display_Select;
+
+architecture Behavioral of Display_Select is
+	variable time_int: integer range 0 to 38;
+	variable dezenas_int, unidades_int: integer range 0 to 9;
+	signal s_dec                      : std_logic_vector(6 downto 0);
+begin
+	process (Value_time, Enable_timer)
+	begin
+		if Enable_timer = '1' then
+			-- Converter Value_time para inteiro
+			time_int := to_integer(unsigned(Value_time));
+
+			-- Obter dígitos das dezenas e unidades
+			dezenas_int := time_int / 10;
+			-- mob obtem resto da divisão
+			unidades_int := time_int mod 10;
+
+			-- Converter dígitos para representação binária de 3 bits
+			Display1 <= std_logic_vector(to_unsigned(dezenas_int, 3));
+			Display0 <= std_logic_vector(to_unsigned(unidades_int, 3));
+			s_dec => others('0');
+
+		else
+			Display1 <= "000";         -- Desliga o dígito das dezenas
+			Display0 <= "000";         -- Desliga o dígito das unidades
+			s_dec <= "0110111";
+		end if;
+	end process;
+	Dec <= s_dec;
+end architecture Behavioral;
+

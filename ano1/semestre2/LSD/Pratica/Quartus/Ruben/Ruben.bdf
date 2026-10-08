@@ -1,0 +1,254 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "graphic" (version "1.4"))
+(symbol
+	(rect 560 192 808 368)
+	(text "FSM" (rect 5 0 27 12)(font "Arial" ))
+	(text "inst" (rect 8 160 25 172)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Start_stop" (rect 0 0 50 12)(font "Arial" ))
+		(text "Start_stop" (rect 21 27 71 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 43 35 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "rst" (rect 0 0 12 12)(font "Arial" ))
+		(text "rst" (rect 21 59 33 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "Exp_time" (rect 0 0 46 12)(font "Arial" ))
+		(text "Exp_time" (rect 21 75 67 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "TExtra[2..0]" (rect 0 0 57 12)(font "Arial" ))
+		(text "TExtra[2..0]" (rect 21 91 78 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "Cozer_time[5..0]" (rect 0 0 81 12)(font "Arial" ))
+		(text "Cozer_time[5..0]" (rect 21 107 102 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "Levedar_time[5..0]" (rect 0 0 93 12)(font "Arial" ))
+		(text "Levedar_time[5..0]" (rect 21 123 114 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "Amassar_time[5..0]" (rect 0 0 96 12)(font "Arial" ))
+		(text "Amassar_time[5..0]" (rect 21 139 117 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "New_time1[5..0]" (rect 0 0 80 12)(font "Arial" ))
+		(text "New_time1[5..0]" (rect 160 27 240 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(port
+		(pt 248 48)
+		(output)
+		(text "Value_time[5..0]" (rect 0 0 80 12)(font "Arial" ))
+		(text "Value_time[5..0]" (rect 160 43 240 55)(font "Arial" ))
+		(line (pt 248 48)(pt 232 48)(line_width 3))
+	)
+	(port
+		(pt 248 64)
+		(output)
+		(text "Enable_timer" (rect 0 0 63 12)(font "Arial" ))
+		(text "Enable_timer" (rect 174 59 237 71)(font "Arial" ))
+		(line (pt 248 64)(pt 232 64))
+	)
+	(port
+		(pt 248 80)
+		(output)
+		(text "Amassar" (rect 0 0 43 12)(font "Arial" ))
+		(text "Amassar" (rect 191 75 234 87)(font "Arial" ))
+		(line (pt 248 80)(pt 232 80))
+	)
+	(port
+		(pt 248 96)
+		(output)
+		(text "Levedar" (rect 0 0 40 12)(font "Arial" ))
+		(text "Levedar" (rect 194 91 234 103)(font "Arial" ))
+		(line (pt 248 96)(pt 232 96))
+	)
+	(port
+		(pt 248 112)
+		(output)
+		(text "Cozer" (rect 0 0 28 12)(font "Arial" ))
+		(text "Cozer" (rect 204 107 232 119)(font "Arial" ))
+		(line (pt 248 112)(pt 232 112))
+	)
+	(port
+		(pt 248 128)
+		(output)
+		(text "LEDR" (rect 0 0 29 12)(font "Arial" ))
+		(text "LEDR" (rect 203 123 232 135)(font "Arial" ))
+		(line (pt 248 128)(pt 232 128))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 160))
+	)
+)
+(symbol
+	(rect 560 8 840 152)
+	(text "Timer_FSM" (rect 220 0 275 12)(font "Arial" ))
+	(text "inst2" (rect 250 128 272 145)(font "Intel Clear" ))
+	(port
+		(pt 280 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 245 27 259 39)(font "Arial" ))
+		(line (pt 280 32)(pt 264 32))
+	)
+	(port
+		(pt 280 48)
+		(input)
+		(text "rst" (rect 0 0 12 12)(font "Arial" ))
+		(text "rst" (rect 247 43 259 55)(font "Arial" ))
+		(line (pt 280 48)(pt 264 48))
+	)
+	(port
+		(pt 280 64)
+		(input)
+		(text "Enable_timer" (rect 0 0 63 12)(font "Arial" ))
+		(text "Enable_timer" (rect 196 59 259 71)(font "Arial" ))
+		(line (pt 280 64)(pt 264 64))
+	)
+	(port
+		(pt 280 80)
+		(input)
+		(text "New_time[5..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "New_time[5..0]" (rect 185 75 259 87)(font "Arial" ))
+		(line (pt 280 80)(pt 264 80)(line_width 3))
+	)
+	(port
+		(pt 280 96)
+		(input)
+		(text "Value_time[5..0]" (rect 0 0 80 12)(font "Arial" ))
+		(text "Value_time[5..0]" (rect 179 91 259 103)(font "Arial" ))
+		(line (pt 280 96)(pt 264 96)(line_width 3))
+	)
+	(port
+		(pt 0 32)
+		(output)
+		(text "Exp_time" (rect 0 0 46 12)(font "Arial" ))
+		(text "Exp_time" (rect 13 27 59 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(output)
+		(text "Decrement_New_Time[5..0]" (rect 0 0 136 12)(font "Arial" ))
+		(text "Decrement_New_Time[5..0]" (rect 0 43 136 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(output)
+		(text "Dec[6..0]" (rect 0 0 46 12)(font "Arial" ))
+		(text "Dec[6..0]" (rect 13 59 59 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 264 128))
+	)
+	(flipy)
+)
+(connector
+	(pt 808 224)
+	(pt 864 224)
+	(bus)
+)
+(connector
+	(pt 864 224)
+	(pt 864 88)
+	(bus)
+)
+(connector
+	(pt 864 88)
+	(pt 840 88)
+	(bus)
+)
+(connector
+	(pt 808 240)
+	(pt 872 240)
+	(bus)
+)
+(connector
+	(pt 872 240)
+	(pt 872 104)
+	(bus)
+)
+(connector
+	(pt 872 104)
+	(pt 840 104)
+	(bus)
+)
+(connector
+	(pt 808 256)
+	(pt 880 256)
+)
+(connector
+	(pt 880 256)
+	(pt 880 72)
+)
+(connector
+	(pt 880 72)
+	(pt 840 72)
+)
+(connector
+	(pt 560 40)
+	(pt 544 40)
+)
+(connector
+	(pt 544 40)
+	(pt 544 272)
+)
+(connector
+	(pt 544 272)
+	(pt 560 272)
+)

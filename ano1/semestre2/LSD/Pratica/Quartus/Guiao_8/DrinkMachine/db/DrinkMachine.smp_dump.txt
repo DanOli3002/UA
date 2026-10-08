@@ -1,0 +1,9 @@
+
+State Machine - |DrinkMachine|ControlUnit:inst|s_currentState
+Name s_currentState.DRINKS s_currentState.EIGHTY s_currentState.SIXTY s_currentState.FORTY s_currentState.TWENTY s_currentState.CLEARED 
+s_currentState.CLEARED 0 0 0 0 0 0 
+s_currentState.TWENTY 0 0 0 0 1 1 
+s_currentState.FORTY 0 0 0 1 0 1 
+s_currentState.SIXTY 0 0 1 0 0 1 
+s_currentState.EIGHTY 0 1 0 0 0 1 
+s_currentState.DRINKS 1 0 0 0 0 1 

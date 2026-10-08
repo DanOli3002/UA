@@ -1,0 +1,41 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity SeqDetFSM_tb is
+end SeqDetFSM_tb;
+
+architecture Stimulus of SeqDetFSM_tb is
+	
+	signal s_clk : std_logic := '0';
+	signal s_user : std_logic;
+	signal s_seq : std_logic;
+
+begin
+	fsm: entity work.SeqDetFSM(MealyArch)
+			port map(clk => s_clk,
+						user => s_user,
+						seq => s_seq);
+						
+	s_clk <= '1' after 20 ns when clk = '0' else
+				'0' after 20 ns when clk = '1';
+				
+	stim_proc : process
+	begin
+		wait for 100 ns;
+		s_user <= '1';
+		wait for 100 ns;
+		s_user <= '0';
+		wait for 40 ns;
+		s_user <= '1';
+		wait for 40 ns;
+		s_user <= '0';
+		wait for 40 ns;
+		s_user <= '1';
+		wait for 40 ns;
+		s_user <= '0';
+		wait for 40 ns;
+		s_user <= '1';
+		wait for 40 ns;
+		s_user <= '0';
+	end process;
+end Stimulus;

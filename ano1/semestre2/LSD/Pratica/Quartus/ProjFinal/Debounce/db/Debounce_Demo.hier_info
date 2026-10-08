@@ -1,0 +1,31 @@
+|DebounceUnit
+refClk => s_pulsedOut.CLK
+refClk => s_debounceCnt[0].CLK
+refClk => s_debounceCnt[1].CLK
+refClk => s_debounceCnt[2].CLK
+refClk => s_debounceCnt[3].CLK
+refClk => s_debounceCnt[4].CLK
+refClk => s_debounceCnt[5].CLK
+refClk => s_debounceCnt[6].CLK
+refClk => s_debounceCnt[7].CLK
+refClk => s_debounceCnt[8].CLK
+refClk => s_debounceCnt[9].CLK
+refClk => s_debounceCnt[10].CLK
+refClk => s_debounceCnt[11].CLK
+refClk => s_debounceCnt[12].CLK
+refClk => s_debounceCnt[13].CLK
+refClk => s_debounceCnt[14].CLK
+refClk => s_debounceCnt[15].CLK
+refClk => s_debounceCnt[16].CLK
+refClk => s_debounceCnt[17].CLK
+refClk => s_debounceCnt[18].CLK
+refClk => s_debounceCnt[19].CLK
+refClk => s_debounceCnt[20].CLK
+refClk => s_debounceCnt[21].CLK
+refClk => s_debounceCnt[22].CLK
+refClk => s_previousIn.CLK
+refClk => s_dirtyIn.CLK
+dirtyIn => s_dirtyIn.DATAIN
+pulsedOut <= s_pulsedOut.DB_MAX_OUTPUT_PORT_TYPE
+
+

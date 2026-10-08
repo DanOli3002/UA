@@ -1,0 +1,7 @@
+
+State Machine - |Placa|Final:final|FSM_Final:FSM|fstate
+Name fstate.lev fstate.ama fstate.coz fstate.clear 
+fstate.clear 0 0 0 0 
+fstate.coz 0 0 1 1 
+fstate.ama 0 1 0 1 
+fstate.lev 1 0 0 1 

@@ -1,0 +1,17 @@
+|FlipFlopD_Demo
+SW[0] => flipflopd_2:ff_d.d
+SW[1] => flipflopd_2:ff_d.set
+SW[2] => flipflopd_2:ff_d.reset
+KEY[0] => flipflopd_2:ff_d.clk
+LEDR[0] << flipflopd_2:ff_d.q
+
+
+|FlipFlopD_Demo|FlipFlopD_2:ff_d
+clk => q~reg0.CLK
+d => ~NO_FANOUT~
+set => process_0.IN0
+reset => q.OUTPUTSELECT
+reset => process_0.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

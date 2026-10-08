@@ -1,0 +1,177 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "New_time1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "New_time1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "New_time1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "New_time1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "New_time1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "New_time1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Value_time[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Value_time[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Value_time[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Value_time[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Value_time[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Value_time[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Enable_timer",
+					"strict" : false
+				},
+				{
+					"name" : "Amassar",
+					"strict" : false
+				},
+				{
+					"name" : "Levedar",
+					"strict" : false
+				},
+				{
+					"name" : "Cozer",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR",
+					"strict" : false
+				},
+				{
+					"name" : "Cozer_time[0]",
+					"strict" : false
+				},
+				{
+					"name" : "TExtra[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Amassar_time[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Levedar_time[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Cozer_time[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TExtra[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Amassar_time[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Levedar_time[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Cozer_time[2]",
+					"strict" : false
+				},
+				{
+					"name" : "TExtra[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Amassar_time[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Levedar_time[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Cozer_time[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Amassar_time[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Levedar_time[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Cozer_time[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Amassar_time[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Levedar_time[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Cozer_time[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Amassar_time[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Levedar_time[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Start_stop",
+					"strict" : false
+				},
+				{
+					"name" : "Exp_time",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

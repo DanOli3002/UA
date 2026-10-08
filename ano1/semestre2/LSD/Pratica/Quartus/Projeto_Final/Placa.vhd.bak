@@ -1,0 +1,28 @@
+library IEEE; 
+use IEEE.STD_LOGIC_1164.all; 
+use IEEE.NUMERIC_STD.all; 
+
+entity Placa is
+	port(SW : in std_logic_vector(0 downto 0);
+		  LEDR : out std_logic_vector(0 downto 0);
+		  CLOCK_50 : in std_logic;
+		  LEDG : out std_logic_vector(2 downto 0);
+		  KEY : in std_logic_vector(1 downto 0);
+		  HEX0 : out std_logic_vector(6 downto 0);
+		  HEX1 : out std_logic_vector(6 downto 0);
+		  HEX2 : out std_logic_vector(6 downto 0));
+end Placa;
+
+architecture Placa_func of Placa is
+begin
+	final : entity work.Final(Final_func)
+								port map(CLOCK_50 => CLOCK_50,
+											red => LEDR,
+											green => LEDG,
+											display0 => HEX0,
+											dislpay1 => HEX1,
+											display2 => HEX2,
+											pao => SW(0),
+											staStop => KEY(0),
+											reset => KEY(1));
+end Placa_func;

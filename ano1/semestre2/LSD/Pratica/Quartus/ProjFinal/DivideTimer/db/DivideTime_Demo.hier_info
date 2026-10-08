@@ -1,0 +1,39 @@
+|Divide_Time
+Value_time[0] => time_int[0].DATAIN
+Value_time[1] => time_int[1].DATAIN
+Value_time[2] => time_int[2].DATAIN
+Value_time[3] => time_int[3].DATAIN
+Value_time[4] => time_int[4].DATAIN
+Value_time[5] => time_int[5].DATAIN
+Enable_timer => prev_Display0[1].LATCH_ENABLE
+Enable_timer => prev_Display0[0].LATCH_ENABLE
+Enable_timer => prev_Display0[2].LATCH_ENABLE
+Enable_timer => prev_Display0[3].LATCH_ENABLE
+Enable_timer => prev_Display1[0].LATCH_ENABLE
+Enable_timer => prev_Display1[1].LATCH_ENABLE
+Enable_timer => prev_Display1[2].LATCH_ENABLE
+Enable_timer => prev_Display1[3].LATCH_ENABLE
+Enable_timer => unidades_int[0].LATCH_ENABLE
+Enable_timer => unidades_int[1].LATCH_ENABLE
+Enable_timer => unidades_int[2].LATCH_ENABLE
+Enable_timer => unidades_int[3].LATCH_ENABLE
+Enable_timer => dezenas_int[0].LATCH_ENABLE
+Enable_timer => dezenas_int[1].LATCH_ENABLE
+Enable_timer => dezenas_int[2].LATCH_ENABLE
+Enable_timer => dezenas_int[3].LATCH_ENABLE
+Enable_timer => time_int[0].LATCH_ENABLE
+Enable_timer => time_int[1].LATCH_ENABLE
+Enable_timer => time_int[2].LATCH_ENABLE
+Enable_timer => time_int[3].LATCH_ENABLE
+Enable_timer => time_int[4].LATCH_ENABLE
+Enable_timer => time_int[5].LATCH_ENABLE
+Display1[0] <= prev_Display1[0].DB_MAX_OUTPUT_PORT_TYPE
+Display1[1] <= prev_Display1[1].DB_MAX_OUTPUT_PORT_TYPE
+Display1[2] <= prev_Display1[2].DB_MAX_OUTPUT_PORT_TYPE
+Display1[3] <= prev_Display1[3].DB_MAX_OUTPUT_PORT_TYPE
+Display0[0] <= prev_Display0[0].DB_MAX_OUTPUT_PORT_TYPE
+Display0[1] <= prev_Display0[1].DB_MAX_OUTPUT_PORT_TYPE
+Display0[2] <= prev_Display0[2].DB_MAX_OUTPUT_PORT_TYPE
+Display0[3] <= prev_Display0[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

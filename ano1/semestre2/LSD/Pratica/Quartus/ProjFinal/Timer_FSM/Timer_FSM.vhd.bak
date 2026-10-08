@@ -1,0 +1,47 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity Timer_FSM is
+	port(
+	clk, rst, Enable_timer : in std_logic;
+	New_time, Value_time   : in std_logic_vector(4 downto 0);
+	Exp_time               : out std_logic_vector(4 downto 0)
+	);
+end Timer_FSM;
+
+architecture Behav of Timer_FSM is
+
+	signal Time_Exp   : std_logic;
+	signal Time_Value : std_logic_vector(4 downto 0);
+	
+begin
+	process (clk, rst)
+	begin
+		if rst = '1' then
+			Exp_time   <= '0';
+			Time_Exp   <= (others => '0');
+			Time_Value <= (others => '0');
+		elsif rising_edge(clk) then
+			if Timer_enable = '1' then
+				Value_Time <= Time_Value;
+			else
+				Value_Time <= Value_Time;
+		end if;
+	end process;
+	
+	process (Time_Exp, Time_Value)
+	begin
+		if Time_Value <= "00000" then
+			Time_Exp <= '1';
+		else
+			Time_Exp <= '0';
+			Time_Value <= std_logic_vector(unsigned(Timer_Value) - 1);
+		end if;
+	end process;
+	
+	Value_Time <= Time_Value;
+	Exp_Time <= Time_Exp;
+	
+end Behav;
+	

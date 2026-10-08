@@ -1,0 +1,8 @@
+
+State Machine - |EsquemaFSM|fstate
+Name fstate.C fstate.L fstate.A fstate.I fstate.F 
+fstate.I 0 0 0 0 0 
+fstate.A 0 0 1 1 0 
+fstate.L 0 1 0 1 0 
+fstate.C 1 0 0 1 0 
+fstate.F 0 0 0 1 1 

@@ -1,0 +1,87 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity DrinkMachine is
+	port(reset	: in  std_logic;
+		  clk		: in  std_logic;
+		  v	: in  std_logic;--0,20€
+		  c	: in  std_logic;--0,50€
+		  drink	: out std_logic);
+end DrinkMachine;
+
+architecture Behavioral of DrinkMachine is
+
+	type TState is (CLEARED, TWENTY, FORTY, SIXTY, EIGHTY, DRINKS);
+	signal s_currentState, s_nextState : TState;
+	
+begin
+	sync_proc : process(clk)
+	begin
+		if (rising_edge(clk)) then
+			if (reset = '1') then
+				s_currentState <= CLEARED;
+			else
+				s_currentState <= s_nextState;
+			end if;
+		end if;
+	end process;
+	
+	comb_proc : process(s_currentState, v, c)
+	begin
+		case (s_currentState) is
+		when CLEARED =>
+			drink <= '0';
+			if (v = '1') then
+				s_nextState <= TWENTY;
+			elsif (c = '1') then
+				s_nextState <= SIXTY;
+			else
+				s_nextState <= CLEARED;
+			end if;
+
+		when TWENTY =>
+			drink <= '0';
+			if (v = '1') then
+				s_nextState <= FORTY;
+			elsif (c = '1') then
+				s_nextState <= EIGHTY;
+			else
+				s_nextState <= TWENTY;
+			end if;
+			
+		when FORTY =>
+			drink <= '0';
+			if (v = '1') then
+				s_nextState <= SIXTY;
+			elsif (c = '1') then
+				s_nextState <= DRINKS;
+			else
+				s_nextState <= FORTY;
+			end if;
+				
+		when SIXTY =>
+			drink <= '0';
+			if (v = '1') then
+				s_nextState <= EIGHTY;
+			elsif (c = '1') then
+				s_nextState <= DRINKS;
+			else
+				s_nextState <= SIXTY;
+			end if;
+			
+		when EIGHTY =>
+			drink <= '0';
+			if (v = '1') then
+				s_nextState <= DRINKS;
+			elsif (c = '1') then
+				s_nextState <= DRINKS;
+			else
+				s_nextState <= EIGHTY;
+			end if;
+				
+		when DRINKS =>
+			drink <= '1';
+		end case;
+	end process;
+end Behavioral;
+				

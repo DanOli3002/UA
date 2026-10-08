@@ -1,0 +1,86 @@
+library IEEE; 
+use IEEE.STD_LOGIC_1164.all; 
+use IEEE.NUMERIC_STD.all;
+
+entity Final is
+	generic (factor5 : positive := 50000000);
+	
+	port (CLOCK_50 : in std_logic;
+			reset : in std_logic;
+			pao : in std_logic;
+			staStop : in std_logic;
+			red : out std_logic;
+			green : out std_logic_vector(2 downto 0);
+			display0 : out std_logic_vector(6 downto 0);
+			display1 : out std_logic_vector(6 downto 0);
+			display2 : out std_logic_vector(6 downto 0));
+end Final;
+
+architecture Final_func of Final is
+
+	signal s_staStop, s_enable, s_reset, s_pao, s_red, s_clk, s_timeExp : std_logic;
+	signal s_green : std_logic_vector(2 downto 0);
+	signal s_display0, s_dislpay1, s_display2 : std_logic_vector(6 downto 0);
+	signal s_staStopFFD : std_logic;
+	signal s_amassar, s_levedar, s_cozer : std_logic_vector(5 downto 0);
+	signal s_clock_50 : std_logic;
+	signal on_off : std_logic;
+	signal newTime, outPut : std_logic_vector(5 downto 0);
+	signal loadEnable : std_logic;
+
+begin
+	
+	FFD : entity work.FlipFlopD(Behavioral)
+							port map(clk => staStop,
+										q => s_staStopFFD,
+										d => not s_staStopFFD);
+										
+	reg : entity work.reg(reg_func)
+							port map(clk => CLOCK_50,
+										reset => reset,
+										sta_stop => s_staStopFFD,
+										prog => pao,
+										on_off => on_off,
+										amassar => s_amassar,
+										levedar => s_levedar,
+										cozer => s_cozer);
+										
+	clkdiv : entity work.ClkDividerN(BehavioralClkDividerN)
+								generic map(divFactor => factor5)
+								port map(clkIn => CLOCK_50,
+											clkOut => s_clock_50);
+											
+	FSM : entity work.FSM_Final(BEHAVIOR)
+							port map(clock => s_clock_50,
+										reset => reset,
+										cozer => s_cozer,
+										levedar => s_levedar,
+										amassar => s_amassar,
+										staStop => on_off,
+										timeExp => s_timeExp,
+										newTime => newTime,
+										load_enable => loadEnable,
+										green => green,
+										enable => s_enable);
+	
+	red <= s_enable;
+										
+	Counter : entity work.timer(rtl)
+									port map(clock => s_clock_50,
+												load_enable => loadEnable,
+												reset => reset,
+												load_data => newTime,
+												enable => s_enable,
+												output => outPut,
+												timeExp => s_timeExp);
+												
+	decoder : entity work.Decoder(Behavioral)
+									port map(enable => s_enable,
+												pao => pao,
+												binInput => outPut,
+												decOut_n0 => display0,
+												decOut_n1 => display1,
+												decOut_n2 => display2);
+												
+												
+end Final_func;

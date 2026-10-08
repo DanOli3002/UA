@@ -1,0 +1,61 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Extra_time[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Extra_time[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Extra_time[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Levedar_time[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Levedar_time[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Amassar_time[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Amassar_time[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Start_stop_out",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "Time_adj",
+					"strict" : false
+				},
+				{
+					"name" : "P1_P2",
+					"strict" : false
+				},
+				{
+					"name" : "Start_stop",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

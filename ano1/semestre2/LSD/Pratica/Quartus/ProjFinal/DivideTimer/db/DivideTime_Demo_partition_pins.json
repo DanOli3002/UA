@@ -1,0 +1,65 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Display1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Display1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Display1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Display0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Display0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Display0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Display0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Enable_timer",
+					"strict" : false
+				},
+				{
+					"name" : "Value_time[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Value_time[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Value_time[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Value_time[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Value_time[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Value_time[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

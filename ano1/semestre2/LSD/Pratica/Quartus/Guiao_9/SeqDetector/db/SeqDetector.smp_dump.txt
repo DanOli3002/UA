@@ -1,0 +1,7 @@
+
+State Machine - |SeqDetector|SeqDetFSM:inst2|s_currentState
+Name s_currentState.D s_currentState.C s_currentState.B s_currentState.A 
+s_currentState.A 0 0 0 0 
+s_currentState.B 0 0 1 1 
+s_currentState.C 0 1 0 1 
+s_currentState.D 1 0 0 1 

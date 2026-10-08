@@ -1,0 +1,106 @@
+# Reading pref.tcl
+# do Projeto_Final_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/1.LSD/PFinal/Projeto_Final/ClkDividerN.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:00 on Jun 04,2023
+# vcom -reportprogress 300 -93 -work work C:/1.LSD/PFinal/Projeto_Final/ClkDividerN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ClkDividerN
+# -- Compiling architecture BehavioralClkDividerN of ClkDividerN
+# End time: 21:07:00 on Jun 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/1.LSD/PFinal/Projeto_Final/Bin7SegDecoder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:00 on Jun 04,2023
+# vcom -reportprogress 300 -93 -work work C:/1.LSD/PFinal/Projeto_Final/Bin7SegDecoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Bin7SegDecoder
+# -- Compiling architecture Behavioral of Bin7SegDecoder
+# End time: 21:07:00 on Jun 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/1.LSD/PFinal/Projeto_Final/FSM_Final.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:00 on Jun 04,2023
+# vcom -reportprogress 300 -93 -work work C:/1.LSD/PFinal/Projeto_Final/FSM_Final.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FSM_Final
+# -- Compiling architecture BEHAVIOR of FSM_Final
+# End time: 21:07:00 on Jun 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/1.LSD/PFinal/Projeto_Final/CounterDown4.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:00 on Jun 04,2023
+# vcom -reportprogress 300 -93 -work work C:/1.LSD/PFinal/Projeto_Final/CounterDown4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CounterDown4
+# -- Compiling architecture rtl of CounterDown4
+# End time: 21:07:00 on Jun 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/1.LSD/PFinal/Projeto_Final/reg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:00 on Jun 04,2023
+# vcom -reportprogress 300 -93 -work work C:/1.LSD/PFinal/Projeto_Final/reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg
+# -- Compiling architecture reg_func of reg
+# End time: 21:07:00 on Jun 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/1.LSD/PFinal/Projeto_Final/FlipFlopD.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:00 on Jun 04,2023
+# vcom -reportprogress 300 -93 -work work C:/1.LSD/PFinal/Projeto_Final/FlipFlopD.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FlipFlopD
+# -- Compiling architecture Behavioral of FlipFlopD
+# End time: 21:07:00 on Jun 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/1.LSD/PFinal/Projeto_Final/Final.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:01 on Jun 04,2023
+# vcom -reportprogress 300 -93 -work work C:/1.LSD/PFinal/Projeto_Final/Final.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Final
+# -- Compiling architecture Final_func of Final
+# -- Loading entity FlipFlopD
+# ** Error: C:/1.LSD/PFinal/Projeto_Final/Final.vhd(36): (vcom-1436) Actual expression (prefix expression) of formal "d" is not globally static.
+# -- Loading entity reg
+# -- Loading entity ClkDividerN
+# -- Loading entity FSM_Final
+# -- Loading entity CounterDown4
+# -- Loading entity Bin7SegDecoder
+# ** Note: C:/1.LSD/PFinal/Projeto_Final/Final.vhd(86): VHDL Compiler exiting
+# End time: 21:07:01 on Jun 04,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./Projeto_Final_run_msim_rtl_vhdl.do line 14
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/1.LSD/PFinal/Projeto_Final/Final.vhd}"

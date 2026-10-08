@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Jun 05 10:36:44 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : ProjF_Demo
+Top-level Entity Name : ProjF
+Family : Cyclone IV E
+Total logic elements : 173
+    Total combinational functions : 164
+    Dedicated logic registers : 52
+Total registers : 52
+Total pins : 37
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

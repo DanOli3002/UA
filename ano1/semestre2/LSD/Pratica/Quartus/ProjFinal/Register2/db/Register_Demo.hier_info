@@ -1,0 +1,42 @@
+|Register1
+rst => i_Start_stop_out.ACLR
+rst => counter[0].ACLR
+rst => counter[1].ACLR
+rst => counter[2].ACLR
+rst => i_P1_P2.ENA
+rst => i_Tadj.ENA
+rst => i_Start_stop.ENA
+clk => i_Start_stop.CLK
+clk => i_Tadj.CLK
+clk => i_P1_P2.CLK
+clk => i_Start_stop_out.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+Start_stop => i_Start_stop.DATAIN
+P1_P2 => i_P1_P2.DATAIN
+Time_adj => i_Tadj.DATAIN
+Extra_time[0] <= i_TExtra.DB_MAX_OUTPUT_PORT_TYPE
+Extra_time[1] <= i_TExtra.DB_MAX_OUTPUT_PORT_TYPE
+Extra_time[2] <= i_TExtra.DB_MAX_OUTPUT_PORT_TYPE
+Cozer_time[0] <= <GND>
+Cozer_time[1] <= <VCC>
+Cozer_time[2] <= <GND>
+Cozer_time[3] <= <VCC>
+Cozer_time[4] <= <GND>
+Cozer_time[5] <= <GND>
+Levedar_time[0] <= <GND>
+Levedar_time[1] <= <GND>
+Levedar_time[2] <= i_P1_P2.DB_MAX_OUTPUT_PORT_TYPE
+Levedar_time[3] <= i_P1_P2.DB_MAX_OUTPUT_PORT_TYPE
+Levedar_time[4] <= <GND>
+Levedar_time[5] <= <GND>
+Amassar_time[0] <= i_P1_P2.DB_MAX_OUTPUT_PORT_TYPE
+Amassar_time[1] <= <VCC>
+Amassar_time[2] <= i_P1_P2.DB_MAX_OUTPUT_PORT_TYPE
+Amassar_time[3] <= <VCC>
+Amassar_time[4] <= <GND>
+Amassar_time[5] <= <GND>
+Start_stop_out <= i_Start_stop_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,8 @@
+
+State Machine - |FSM|Current_State
+Name Current_State.Final_state Current_State.Cozer_state Current_State.Levedar_state Current_State.Amassar_state Current_State.xIn 
+Current_State.xIn 0 0 0 0 0 
+Current_State.Amassar_state 0 0 0 1 1 
+Current_State.Levedar_state 0 0 1 0 1 
+Current_State.Cozer_state 0 1 0 0 1 
+Current_State.Final_state 1 0 0 0 1 

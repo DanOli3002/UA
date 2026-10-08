@@ -1,0 +1,21 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pulsedOut",
+					"strict" : false
+				},
+				{
+					"name" : "refClk",
+					"strict" : false
+				},
+				{
+					"name" : "dirtyIn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

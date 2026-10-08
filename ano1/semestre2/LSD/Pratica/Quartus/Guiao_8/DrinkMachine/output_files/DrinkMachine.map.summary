@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue May 09 12:22:10 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : DrinkMachine
+Top-level Entity Name : DrinkMachine
+Family : Cyclone IV E
+Total logic elements : 181
+    Total combinational functions : 177
+    Dedicated logic registers : 72
+Total registers : 72
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

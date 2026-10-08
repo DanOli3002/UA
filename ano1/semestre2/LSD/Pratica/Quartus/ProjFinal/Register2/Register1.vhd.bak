@@ -1,0 +1,104 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity Register1 is
+    port (
+        rst, clk, Start_stop                   : in  std_logic;
+        P1_P2                                  : in  std_logic_vector(1 downto 0);
+        Time_adj                               : in  std_logic;
+        Extra_time                             : out std_logic_vector(3 downto 0);
+        Cozer_time, Levedar_time, Amassar_time : out std_logic_vector(4 downto 0);
+        Start_stop_out                         : out std_logic
+    );
+end Register1;
+
+architecture Behav of Register1 is
+    signal i_rst, i_Start_stop, i_Start_stop_out, i_Tadj         : std_logic;
+    signal i_TExtra                                      : std_logic_vector(3 downto 0);
+    signal i_P1_P2                                       : std_logic_vector(1 downto 0);
+    signal i_TCozer, i_TLevedar, i_time, i_TAmassar      : std_logic_vector(4 downto 0);
+    signal counter                                       : unsigned(2 downto 0) := (others => '0');
+    
+begin
+    -- clk e rst
+    process (clk)
+    begin
+			if rising_edge(clk) then
+            if rst = '1' then
+                i_rst <= '1';
+            else
+                i_rst <= '0';
+                i_P1_P2 <= P1_P2;
+                i_Tadj <= Time_adj;
+                i_Start_stop <= Start_stop;
+                
+                if i_Tadj = '1' then
+                    if counter < 5 then
+                        counter <= counter + 1; -- Aumenta o contador quando o tempo extra é ativado e está abaixo de 5
+                    end if;
+                else
+                    counter <= (others => '0'); -- Reinicia o contador quando o tempo extra é desativado
+                end if;
+            end if;
+        end if;
+    end process;
+
+    -- tempos
+    process (i_P1_P2, i_time, i_Tadj, counter)
+    begin
+        if i_Tadj = '1' then
+            i_TExtra <= std_logic_vector(to_unsigned(counter, i_TExtra'length));
+        else
+            i_TExtra <= "0000"; -- Tempo extra desativado
+        end if;
+
+        -- Lógica para atualizar os tempos (amassar, levedar, cozer)
+        case i_P1_P2 is
+            when "00" =>
+                i_TAmassar <= "01010"; -- Tempo para amassar pão caseiro
+            when "01" =>
+                i_TAmassar <= "01111"; -- Tempo para amassar pão rústico
+            when others =>
+                i_TAmassar <= (others => '0');
+        end case;
+
+        case i_P1_P2 is
+            when "00" =>
+                i_TLevedar <= "00100"; -- Tempo para levedar pão caseiro
+            when "01" =>
+                i_TLevedar <= "01000"; -- Tempo para levedar pão rústico
+            when others =>
+                i_TLevedar <= (others => '0');
+        end case;
+
+        case i_P1_P2 is
+			when "00" =>
+				i_TCozer <= "01010"; -- Tempo para cozer pão caseiro
+			when "01" =>
+				i_TCozer <= "01010"; -- Tempo para cozer pão rústico
+			when others =>
+				i_TCozer <= (others => '0');
+		end case;
+		
+		-- Lógica para atualizar o tempo total
+		-- i_time <= std_logic_vector(unsigned(i_TAmassar) + unsigned(i_TLevedar) + unsigned(i_TCozer));
+	end process;
+	
+	-- start/stop
+	process (i_Start_stop)
+		begin
+			if i_Start_stop = '1' then
+				i_Start_stop_out <= '1'; -- Saída Start_stop_out ativada
+			else
+				i_Start_stop_out <= '0'; -- Saída Start_stop_out desativada
+		   end if;
+	end process;
+	
+	-- Atualizar as saídas
+	Extra_time <= i_TExtra;
+	Cozer_time <= i_TCozer;
+	Levedar_time <= i_TLevedar;
+	Amassar_time <= i_TAmassar;
+	Start_stop_out <= i_Start_stop_out;
+end Behav;

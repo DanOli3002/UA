@@ -1,0 +1,51 @@
+|SeqDetector
+LEDR[0] <= SeqDetFSM:inst2.seq
+LEDR[1] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+CLOCK_50 => ClkDividerN:inst.clkIn
+SW[0] => SeqDetFSM:inst2.user
+SW[0] => LEDR[1].DATAIN
+
+
+|SeqDetector|SeqDetFSM:inst2
+clk => s_currentState~1.DATAIN
+user => seq.DATAB
+user => s_currentState.B.DATAIN
+user => Selector0.IN2
+user => Selector0.IN3
+user => Selector2.IN1
+user => Selector1.IN0
+seq <= seq.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SeqDetector|ClkDividerN:inst
+clkIn => clkOut~reg0.CLK
+clkIn => s_divCounter[0].CLK
+clkIn => s_divCounter[1].CLK
+clkIn => s_divCounter[2].CLK
+clkIn => s_divCounter[3].CLK
+clkIn => s_divCounter[4].CLK
+clkIn => s_divCounter[5].CLK
+clkIn => s_divCounter[6].CLK
+clkIn => s_divCounter[7].CLK
+clkIn => s_divCounter[8].CLK
+clkIn => s_divCounter[9].CLK
+clkIn => s_divCounter[10].CLK
+clkIn => s_divCounter[11].CLK
+clkIn => s_divCounter[12].CLK
+clkIn => s_divCounter[13].CLK
+clkIn => s_divCounter[14].CLK
+clkIn => s_divCounter[15].CLK
+clkIn => s_divCounter[16].CLK
+clkIn => s_divCounter[17].CLK
+clkIn => s_divCounter[18].CLK
+clkIn => s_divCounter[19].CLK
+clkIn => s_divCounter[20].CLK
+clkIn => s_divCounter[21].CLK
+clkIn => s_divCounter[22].CLK
+clkIn => s_divCounter[23].CLK
+clkIn => s_divCounter[24].CLK
+clkIn => s_divCounter[25].CLK
+clkIn => s_divCounter[26].CLK
+clkOut <= clkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

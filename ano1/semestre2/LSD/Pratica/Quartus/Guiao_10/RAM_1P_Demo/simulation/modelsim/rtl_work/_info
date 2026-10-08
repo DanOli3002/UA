@@ -1,0 +1,97 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/UA/ano1/semestre2/LSD/Pratica/Quartus/Guiao_10/RAM_1P_Demo/simulation/modelsim
+Eram_1p_16_8
+Z1 w1684836837
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z5 8C:/UA/ano1/semestre2/LSD/Pratica/Quartus/Guiao_10/RAM_1P_Demo/RAM_1P_16_8.vhd
+Z6 FC:/UA/ano1/semestre2/LSD/Pratica/Quartus/Guiao_10/RAM_1P_Demo/RAM_1P_16_8.vhd
+l0
+L5 1
+VR?WRzmjdf9g[cChLc>f0_0
+!s100 KJmYLODS2bH45]gfC_R:M2
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1684839020
+!i10b 1
+Z9 !s108 1684839019.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/UA/ano1/semestre2/LSD/Pratica/Quartus/Guiao_10/RAM_1P_Demo/RAM_1P_16_8.vhd|
+Z11 !s107 C:/UA/ano1/semestre2/LSD/Pratica/Quartus/Guiao_10/RAM_1P_Demo/RAM_1P_16_8.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+Z14 DEx4 work 11 ram_1p_16_8 0 22 R?WRzmjdf9g[cChLc>f0_0
+!i122 0
+l20
+L13 19
+VZ6H4FD<e73Tm6n?`3nV]X1
+!s100 AzM@N6ORcAzBzBJiJBT?<1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eram_1p_16_8_tb
+Z15 w1684838957
+R3
+R4
+!i122 3
+R0
+Z16 8C:/UA/ano1/semestre2/LSD/Pratica/Quartus/Guiao_10/RAM_1P_Demo/RAM_1P_16_8_tb.vhd
+Z17 FC:/UA/ano1/semestre2/LSD/Pratica/Quartus/Guiao_10/RAM_1P_Demo/RAM_1P_16_8_tb.vhd
+l0
+L4 1
+VeA_iYC<DFD^]bIl;6ZS]=1
+!s100 =oklGJWQAC15o_iN[ge0R1
+R7
+32
+Z18 !s110 1684839115
+!i10b 1
+Z19 !s108 1684839114.000000
+Z20 !s90 -reportprogress|300|-work|work|C:/UA/ano1/semestre2/LSD/Pratica/Quartus/Guiao_10/RAM_1P_Demo/RAM_1P_16_8_tb.vhd|
+Z21 !s107 C:/UA/ano1/semestre2/LSD/Pratica/Quartus/Guiao_10/RAM_1P_Demo/RAM_1P_16_8_tb.vhd|
+!i113 1
+Z22 o-work work
+R13
+Astimulus
+R2
+R14
+R3
+R4
+Z23 DEx4 work 14 ram_1p_16_8_tb 0 22 eA_iYC<DFD^]bIl;6ZS]=1
+!i122 3
+l13
+Z24 L7 44
+Z25 V?^hAl3YB0PNz[hL>OJ@V^0
+Z26 !s100 8`XZJ>L[izCZZD5;S=iAz3
+R7
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R22
+R13

@@ -1,0 +1,144 @@
+|Placa
+SW[0] => shift_reg8_demo:bloco.SIN
+LEDR[0] << shift_reg8_demo:bloco.dataOut[0]
+LEDR[1] << shift_reg8_demo:bloco.dataOut[1]
+LEDR[2] << shift_reg8_demo:bloco.dataOut[2]
+LEDR[3] << shift_reg8_demo:bloco.dataOut[3]
+LEDR[4] << shift_reg8_demo:bloco.dataOut[4]
+LEDR[5] << shift_reg8_demo:bloco.dataOut[5]
+LEDR[6] << shift_reg8_demo:bloco.dataOut[6]
+LEDR[7] << shift_reg8_demo:bloco.dataOut[7]
+CLOCK_50 => shift_reg8_demo:bloco.clk
+KEY[0] => shift_reg8_demo:bloco.sel
+KEY[1] => shift_reg8_demo:bloco.reset
+
+
+|Placa|Shift_Reg8_Demo:bloco
+SIN => shiftregister8:shift8.sin
+dataOut[0] <= shiftregister8:shift8.dataOut[0]
+dataOut[1] <= shiftregister8:shift8.dataOut[1]
+dataOut[2] <= shiftregister8:shift8.dataOut[2]
+dataOut[3] <= shiftregister8:shift8.dataOut[3]
+dataOut[4] <= shiftregister8:shift8.dataOut[4]
+dataOut[5] <= shiftregister8:shift8.dataOut[5]
+dataOut[6] <= shiftregister8:shift8.dataOut[6]
+dataOut[7] <= shiftregister8:shift8.dataOut[7]
+clk => clkdivider_5:divider5.clkIn
+clk => clkdivider10:divider10.clkIn
+sel => flipflopd:flop.clk
+reset => shiftregister8:shift8.reset
+
+
+|Placa|Shift_Reg8_Demo:bloco|ShiftRegister8:shift8
+clk => S_Q[0].CLK
+clk => S_Q[1].CLK
+clk => S_Q[2].CLK
+clk => S_Q[3].CLK
+clk => S_Q[4].CLK
+clk => S_Q[5].CLK
+clk => S_Q[6].CLK
+clk => S_Q[7].CLK
+dataOut[0] <= S_Q[0].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= S_Q[1].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= S_Q[2].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= S_Q[3].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= S_Q[4].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= S_Q[5].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= S_Q[6].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= S_Q[7].DB_MAX_OUTPUT_PORT_TYPE
+sin => S_Q.DATAA
+sin => S_Q.DATAB
+sel => S_Q.OUTPUTSELECT
+sel => S_Q.OUTPUTSELECT
+sel => S_Q.OUTPUTSELECT
+sel => S_Q.OUTPUTSELECT
+sel => S_Q.OUTPUTSELECT
+sel => S_Q.OUTPUTSELECT
+sel => S_Q.OUTPUTSELECT
+sel => S_Q.OUTPUTSELECT
+reset => S_Q.OUTPUTSELECT
+reset => S_Q.OUTPUTSELECT
+reset => S_Q.OUTPUTSELECT
+reset => S_Q.OUTPUTSELECT
+reset => S_Q.OUTPUTSELECT
+reset => S_Q.OUTPUTSELECT
+reset => S_Q.OUTPUTSELECT
+reset => S_Q.OUTPUTSELECT
+
+
+|Placa|Shift_Reg8_Demo:bloco|FlipFlopD:flop
+clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Placa|Shift_Reg8_Demo:bloco|ClkDivider_5:divider5
+clkIn => s_divCounter[0].CLK
+clkIn => s_divCounter[1].CLK
+clkIn => s_divCounter[2].CLK
+clkIn => s_divCounter[3].CLK
+clkIn => s_divCounter[4].CLK
+clkIn => s_divCounter[5].CLK
+clkIn => s_divCounter[6].CLK
+clkIn => s_divCounter[7].CLK
+clkIn => s_divCounter[8].CLK
+clkIn => s_divCounter[9].CLK
+clkIn => s_divCounter[10].CLK
+clkIn => s_divCounter[11].CLK
+clkIn => s_divCounter[12].CLK
+clkIn => s_divCounter[13].CLK
+clkIn => s_divCounter[14].CLK
+clkIn => s_divCounter[15].CLK
+clkIn => s_divCounter[16].CLK
+clkIn => s_divCounter[17].CLK
+clkIn => s_divCounter[18].CLK
+clkIn => s_divCounter[19].CLK
+clkIn => s_divCounter[20].CLK
+clkIn => s_divCounter[21].CLK
+clkIn => s_divCounter[22].CLK
+clkIn => s_divCounter[23].CLK
+clkIn => s_divCounter[24].CLK
+clkIn => s_divCounter[25].CLK
+clkIn => clkOut~reg0.CLK
+clkOut <= clkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Placa|Shift_Reg8_Demo:bloco|ClkDivider10:divider10
+clkIn => s_divCounter[0].CLK
+clkIn => s_divCounter[1].CLK
+clkIn => s_divCounter[2].CLK
+clkIn => s_divCounter[3].CLK
+clkIn => s_divCounter[4].CLK
+clkIn => s_divCounter[5].CLK
+clkIn => s_divCounter[6].CLK
+clkIn => s_divCounter[7].CLK
+clkIn => s_divCounter[8].CLK
+clkIn => s_divCounter[9].CLK
+clkIn => s_divCounter[10].CLK
+clkIn => s_divCounter[11].CLK
+clkIn => s_divCounter[12].CLK
+clkIn => s_divCounter[13].CLK
+clkIn => s_divCounter[14].CLK
+clkIn => s_divCounter[15].CLK
+clkIn => s_divCounter[16].CLK
+clkIn => s_divCounter[17].CLK
+clkIn => s_divCounter[18].CLK
+clkIn => s_divCounter[19].CLK
+clkIn => s_divCounter[20].CLK
+clkIn => s_divCounter[21].CLK
+clkIn => s_divCounter[22].CLK
+clkIn => s_divCounter[23].CLK
+clkIn => s_divCounter[24].CLK
+clkIn => s_divCounter[25].CLK
+clkIn => s_divCounter[26].CLK
+clkIn => clkOut~reg0.CLK
+clkOut <= clkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Placa|Shift_Reg8_Demo:bloco|Mux2_1:mux2_1
+sel => output.OUTPUTSELECT
+input0 => output.DATAB
+input1 => output.DATAA
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+

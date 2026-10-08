@@ -1,0 +1,93 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Exp_time",
+					"strict" : false
+				},
+				{
+					"name" : "Decrement_New_Time[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Decrement_New_Time[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Decrement_New_Time[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Decrement_New_Time[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Decrement_New_Time[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Decrement_New_Time[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Dec[5]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "Enable_timer",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "New_time[0]",
+					"strict" : false
+				},
+				{
+					"name" : "New_time[1]",
+					"strict" : false
+				},
+				{
+					"name" : "New_time[2]",
+					"strict" : false
+				},
+				{
+					"name" : "New_time[3]",
+					"strict" : false
+				},
+				{
+					"name" : "New_time[4]",
+					"strict" : false
+				},
+				{
+					"name" : "New_time[5]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

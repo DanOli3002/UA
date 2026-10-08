@@ -1,0 +1,109 @@
+|DrinkMachine
+LEDR[0] <= ControlUnit:inst.drink
+SW[0] => DebounceUnit:inst3.dirtyIn
+SW[1] => DebounceUnit:inst4.dirtyIn
+SW[2] => ControlUnit:inst.reset
+CLOCK_50 => ClkDividerN:inst2.clkIn
+
+
+|DrinkMachine|ControlUnit:inst
+reset => s_currentState.OUTPUTSELECT
+reset => s_currentState.OUTPUTSELECT
+reset => s_currentState.OUTPUTSELECT
+reset => s_currentState.OUTPUTSELECT
+reset => s_currentState.OUTPUTSELECT
+reset => s_currentState.OUTPUTSELECT
+clk => s_currentState~1.DATAIN
+v => s_nextState.OUTPUTSELECT
+v => s_nextState.OUTPUTSELECT
+v => s_nextState.OUTPUTSELECT
+v => Selector2.IN5
+v => Selector4.IN5
+v => Selector6.IN4
+v => Selector8.IN4
+c => s_nextState.DATAA
+c => s_nextState.DATAA
+c => s_nextState.DATAA
+drink <= drink.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DrinkMachine|ClkDividerN:inst2
+clkIn => clkOut~reg0.CLK
+clkIn => s_divCounter[0].CLK
+clkIn => s_divCounter[1].CLK
+clkIn => s_divCounter[2].CLK
+clkIn => s_divCounter[3].CLK
+clkIn => s_divCounter[4].CLK
+clkIn => s_divCounter[5].CLK
+clkIn => s_divCounter[6].CLK
+clkIn => s_divCounter[7].CLK
+clkIn => s_divCounter[8].CLK
+clkIn => s_divCounter[9].CLK
+clkIn => s_divCounter[10].CLK
+clkIn => s_divCounter[11].CLK
+clkIn => s_divCounter[12].CLK
+clkOut <= clkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DrinkMachine|DebounceUnit:inst3
+refClk => s_pulsedOut.CLK
+refClk => s_debounceCnt[0].CLK
+refClk => s_debounceCnt[1].CLK
+refClk => s_debounceCnt[2].CLK
+refClk => s_debounceCnt[3].CLK
+refClk => s_debounceCnt[4].CLK
+refClk => s_debounceCnt[5].CLK
+refClk => s_debounceCnt[6].CLK
+refClk => s_debounceCnt[7].CLK
+refClk => s_debounceCnt[8].CLK
+refClk => s_debounceCnt[9].CLK
+refClk => s_debounceCnt[10].CLK
+refClk => s_debounceCnt[11].CLK
+refClk => s_debounceCnt[12].CLK
+refClk => s_debounceCnt[13].CLK
+refClk => s_debounceCnt[14].CLK
+refClk => s_debounceCnt[15].CLK
+refClk => s_debounceCnt[16].CLK
+refClk => s_debounceCnt[17].CLK
+refClk => s_debounceCnt[18].CLK
+refClk => s_debounceCnt[19].CLK
+refClk => s_debounceCnt[20].CLK
+refClk => s_debounceCnt[21].CLK
+refClk => s_debounceCnt[22].CLK
+refClk => s_previousIn.CLK
+refClk => s_dirtyIn.CLK
+dirtyIn => s_dirtyIn.DATAIN
+pulsedOut <= s_pulsedOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DrinkMachine|DebounceUnit:inst4
+refClk => s_pulsedOut.CLK
+refClk => s_debounceCnt[0].CLK
+refClk => s_debounceCnt[1].CLK
+refClk => s_debounceCnt[2].CLK
+refClk => s_debounceCnt[3].CLK
+refClk => s_debounceCnt[4].CLK
+refClk => s_debounceCnt[5].CLK
+refClk => s_debounceCnt[6].CLK
+refClk => s_debounceCnt[7].CLK
+refClk => s_debounceCnt[8].CLK
+refClk => s_debounceCnt[9].CLK
+refClk => s_debounceCnt[10].CLK
+refClk => s_debounceCnt[11].CLK
+refClk => s_debounceCnt[12].CLK
+refClk => s_debounceCnt[13].CLK
+refClk => s_debounceCnt[14].CLK
+refClk => s_debounceCnt[15].CLK
+refClk => s_debounceCnt[16].CLK
+refClk => s_debounceCnt[17].CLK
+refClk => s_debounceCnt[18].CLK
+refClk => s_debounceCnt[19].CLK
+refClk => s_debounceCnt[20].CLK
+refClk => s_debounceCnt[21].CLK
+refClk => s_debounceCnt[22].CLK
+refClk => s_previousIn.CLK
+refClk => s_dirtyIn.CLK
+dirtyIn => s_dirtyIn.DATAIN
+pulsedOut <= s_pulsedOut.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,38 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all; 
+
+entity reg is
+	port(clk : in std_logic;
+			reset : in std_logic;
+			sta_stop : in std_logic;
+			prog : in std_logic;
+			on_off : out std_logic;
+			amassar : out std_logic_vector(5 downto 0);
+			levedar : out std_logic_vector(5 downto 0);
+			cozer : out std_logic_vector(5 downto 0));
+end reg;
+
+architecture reg_func of reg is
+begin
+	on_off <= sta_stop;
+	process(clk, reset)
+	begin
+		if (reset = '0') then
+			amassar <= "001010";
+			levedar <= "000100";
+			cozer <= "001010";
+		else
+			if (rising_edge(clk)) then
+				if (prog = '1') then
+					amassar <= "001111";
+					levedar <= "001000";
+					cozer <= "001010";
+				else
+					amassar <= "001010";
+					levedar <= "000100";
+					cozer <= "001010";
+				end if;
+			end if;
+		end if;
+	end process;
+end reg_func;
