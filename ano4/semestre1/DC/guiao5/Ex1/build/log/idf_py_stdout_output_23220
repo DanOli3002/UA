@@ -1,0 +1,28 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Users\danie\esp\esp-idf\tools\python_env\idf5.5_py3.11_env\Scripts\python.exe -DESP_PLATFORM=1 -DSDKCONFIG='c:\UA\ano4\semestre1\DC\guiao5\Ex1\sdkconfig' -DCCACHE_ENABLE=1 C:\UA\ano4\semestre1\DC\guiao5\Ex1
+-- Found Git: C:/Users/danie/esp/esp-idf/tools/tools/idf-git/2.39.2/cmd/git.exe (found version "2.39.2.windows.1")
+-- Minimal build - ON
+-- ccache will be used for faster recompilation
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: C:/Users/danie/esp/esp-idf/tools/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc.exe
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Users/danie/esp/esp-idf/tools/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Users/danie/esp/esp-idf/tools/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32c6
+NOTICE: Dependencies lock doesn't exist, solving dependencies.
+NOTICE: Using component placed at C:\Users\danie\esp\v5.5.1\esp-idf\examples\storage\sd_card\sdmmc\components\sd_card for dependency "sd_card", specified in C:\UA\ano4\semestre1\DC\guiao5\Ex1\main\idf_component.yml
+.NOTICE: Updating lock file at C:\UA\ano4\semestre1\DC\guiao5\Ex1\dependencies.lock
+NOTICE: Processing 2 dependencies:
+NOTICE: [1/2] sd_card (*) (C:\Users\danie\esp\v5.5.1\esp-idf\examples\storage\sd_card\sdmmc\components\sd_card)
+NOTICE: [2/2] idf (5.5.1)
+-- Configuring incomplete, errors occurred!
