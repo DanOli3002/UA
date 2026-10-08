@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/UA/ano4/semestre1/DC/guiao1/hello word/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "C:/UA/ano4/semestre1/DC/guiao1/hello word/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "C:/UA/ano4/semestre1/DC/guiao1/hello word/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "C:/UA/ano4/semestre1/DC/guiao1/hello word/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "C:/UA/ano4/semestre1/DC/guiao1/hello word/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "C:/UA/ano4/semestre1/DC/guiao1/hello word/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "C:/UA/ano4/semestre1/DC/guiao1/hello word/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "C:/UA/ano4/semestre1/DC/guiao1/hello word/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "C:/UA/ano4/semestre1/DC/guiao1/hello word/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "C:/UA/ano4/semestre1/DC/guiao1/hello word/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}
