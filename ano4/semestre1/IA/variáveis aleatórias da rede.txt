@@ -1,0 +1,27 @@
+variáveis aleatórias da rede:
+C - cara preocupada
+M - uso exagerado do rato
+W - sobrecarga de trabalho
+E - acumulação de correio eletrônico
+H - precisa de ajuda
+P - usa processador de texto SOF2025 Pal
+
+
+                                   H <----- P
+                                 /   \     /
+                                /     \   /
+                              C<       >M<
+                             /^
+                            /
+                           W
+                          /
+                       E</
+
+W e P são probabilidades simples
+P(W = T) = 60%
+P(W = F) = 40%
+
+P(P = T) = 5%
+P(P = F) = 95%
+
+probabilidade condicionada
