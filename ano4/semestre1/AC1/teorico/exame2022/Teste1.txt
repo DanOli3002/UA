@@ -1,0 +1,7 @@
+Exame Final 2022
+
+Parte 1
+[1,7] U [9]
+
+Parte 2
+[23,26]
