@@ -1,0 +1,76 @@
+$comment
+	File created using the following command:
+		vcd file DecoderDemo.msim.vcd -direction
+$end
+$date
+	Tue Nov 15 12:31:52 2022
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module DecoderDemo_vlg_vec_tst $end
+$var reg 1 ! EH $end
+$var reg 1 " EL $end
+$var reg 1 # X1 $end
+$var reg 1 $ X2 $end
+$var wire 1 % Y0 $end
+$var wire 1 & Y1 $end
+$var wire 1 ' Y2 $end
+$var wire 1 ( Y3 $end
+
+$scope module i1 $end
+$var wire 1 ) gnd $end
+$var wire 1 * vcc $end
+$var wire 1 + unknown $end
+$var tri1 1 , devclrn $end
+$var tri1 1 - devpor $end
+$var tri1 1 . devoe $end
+$var wire 1 / Y0~output_o $end
+$var wire 1 0 Y1~output_o $end
+$var wire 1 1 Y2~output_o $end
+$var wire 1 2 Y3~output_o $end
+$var wire 1 3 X2~input_o $end
+$var wire 1 4 X1~input_o $end
+$var wire 1 5 EH~input_o $end
+$var wire 1 6 EL~input_o $end
+$var wire 1 7 inst|inst~combout $end
+$var wire 1 8 inst|inst1~combout $end
+$var wire 1 9 inst|inst2~combout $end
+$var wire 1 : inst|inst3~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+0"
+0#
+1$
+0%
+1&
+0'
+0(
+0)
+1*
+x+
+1,
+1-
+1.
+0/
+10
+01
+02
+13
+04
+15
+06
+07
+18
+09
+0:
+$end
+#1000000

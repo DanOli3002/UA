@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/UA/1ºano/1ºsemestre/ISD/simulation/qsim
+vDecoderDemo
+!s110 1668515510
+!i10b 1
+!s100 =:cE8Tm?h>PjUHZ0eH@0h3
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IggZc0U?Jze6anD:UKWX]Y0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/UA/ano1/semestre1/ISD/Quartus/simulation/qsim
+w1668515508
+8DecoderDemo.vo
+FDecoderDemo.vo
+!i122 6
+L0 32 244
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z4 !s108 1668515510.000000
+!s107 DecoderDemo.vo|
+!s90 -work|work|DecoderDemo.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@decoder@demo
+vDecoderDemo_vlg_vec_tst
+!s110 1668515511
+!i10b 1
+!s100 fSRiRZ461:XN@]kC;SI6_2
+R0
+IUUA4Sd6?EE1fBHZoWKMWD3
+R1
+R2
+w1668515506
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 7
+L0 30 54
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R5
+R6
+n@decoder@demo_vlg_vec_tst

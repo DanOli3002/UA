@@ -1,0 +1,107 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/UA/ano1/semestre1/ISD/Quartus/MuxDemo/simulation/qsim
+vMuxDemo
+Z1 !s110 1669117707
+!i10b 1
+!s100 f1hflA][fn`TaE4I[QNg`3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I14_bTef`0TDl`o1E?mGCP3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1669117704
+Z4 8MuxDemo.vo
+Z5 FMuxDemo.vo
+!i122 6
+L0 32 99
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1669117707.000000
+Z8 !s107 MuxDemo.vo|
+Z9 !s90 -work|work|MuxDemo.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@mux@demo
+vMuxDemo2
+Z12 !s110 1669121226
+!i10b 1
+!s100 F8Ie7`e4Kcic:;68J>Og73
+R2
+I<]iEZ8c_E?<LEEkQBMARn1
+R3
+R0
+w1669121223
+R4
+R5
+!i122 8
+L0 32 421
+R6
+r1
+!s85 0
+31
+!s108 1669121225.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@mux@demo2
+vMuxDemo2_vlg_vec_tst
+R12
+!i10b 1
+!s100 f[B^O`mOfGhTbzjAkfd0j2
+R2
+ICHbm2dOzilz<5<5l06OZ@1
+R3
+R0
+w1669121221
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 9
+L0 30 176
+R6
+r1
+!s85 0
+31
+!s108 1669121226.000000
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R10
+R11
+n@mux@demo2_vlg_vec_tst
+vMuxDemo_vlg_vec_tst
+R1
+!i10b 1
+!s100 XM<ID8kOP]4DbKS6V`=h10
+R2
+I<XWjXTAEX5DGeE>z@^k8D1
+R3
+R0
+w1669117702
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 7
+L0 30 40
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+n@mux@demo_vlg_vec_tst

@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/UA/ano1/semestre1/ISD/Quartus/TesteSimulcao/simulation/qsim
+vMUX8_1
+Z1 !s110 1670330005
+!i10b 1
+!s100 _TCe0eRi^ghN@j>E_HA<S2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IW9ZXXRS19F5oAB?V<73l[1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1670330003
+8TesteSimulacao.vo
+FTesteSimulacao.vo
+!i122 8
+L0 32 248
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1670330005.000000
+!s107 TesteSimulacao.vo|
+!s90 -work|work|TesteSimulacao.vo|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@m@u@x8_1
+vMUX8_1_vlg_vec_tst
+R1
+!i10b 1
+!s100 `hgCALG;Ya@_G5RSGgaWH1
+R2
+Ihnml=0ZVnO2cPlj8nRP@i0
+R3
+R0
+w1670330001
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 9
+L0 30 106
+R4
+r1
+!s85 0
+31
+R5
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R6
+R7
+n@m@u@x8_1_vlg_vec_tst
