@@ -1,0 +1,360 @@
+\UseRawInputEncoding
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{microtype} % Melhora a justificação e espaçamento entre caracteres
+\usepackage[colorlinks=true, linkcolor=primaryColor, urlcolor=secondaryColor]{hyperref}
+\usepackage{underscore}
+
+% --- Definição de Cores Profissionais ---
+\definecolor{primaryColor}{RGB}{26, 54, 93}     % Azul Escuro / Naval
+\definecolor{secondaryColor}{RGB}{43, 108, 176} % Azul Intermédio
+\definecolor{textColor}{RGB}{45, 55, 72}        % Cinza Escuro para texto (menos agressivo que preto puro)
+\definecolor{lightGray}{RGB}{247, 250, 252}    % Fundo para caixas ou tabelas
+
+% --- Configuração das Margens (Otimização de Espaço) ---
+\geometry{
+    a4paper,
+    top=30mm,
+    bottom=30mm,
+    left=25mm,
+    right=25mm,
+    headheight=15pt,
+    footskip=15mm
+}
+
+% --- Customização do Texto Global ---
+\color{textColor}
+\renewcommand{\baselinestretch}{1.15} % Espaçamento entre linhas ligeiramente superior
+
+% --- Configuração de Cabeçalhos e Rodapés ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{gray}Relatório de Análise de Base de Dados: Cineteatro}
+\fancyhead[R]{\small\color{gray}Grupo P2G9}
+\fancyfoot[C]{\small\color{textColor}\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{gray!50}\leaders\hrule height \headrulewidth\hfill}}
+
+% --- Estilização das Secções ---
+\titleformat{\section}
+  {\Large\bfseries\color{primaryColor}}
+  {\thesection}{1em}{}[{\color{secondaryColor!40}\titlerule[1.5pt]}]
+
+\titleformat{\subsection}
+  {\large\bfseries\color{secondaryColor}}
+  {\thesubsection}{1em}{}
+
+% --- Configuração de Legendas (Captions) ---
+\captionsetup{
+    labelfont={bf,color=primaryColor},
+    font=small,
+    labelsep=quad,
+    margin=10pt
+}
+
+% --- Ajuste nos Espaçamentos das Listas ---
+\setlist[itemize]{leftmargin=*, topsep=4pt, itemsep=3pt, parsep=0pt, partopsep=0pt}
+
+\graphicspath{{Images/}}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegray}{rgb}{0.95,0.95,0.95}
+
+\lstset{
+    backgroundcolor=\color{codegray},
+    basicstyle=\ttfamily\small,
+    frame=single,
+    breaklines=true,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!50!black},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    tabsize=4
+}
+
+\begin{document}
+
+% ==============================================================================
+% PÁGINA DE ROSTO CUSTOMIZADA (DESIGN ELEGANTE E MODERNO)
+% ==============================================================================
+\begin{titlepage}
+    \centering
+    
+    \vspace*{1cm}
+
+    {\color{secondaryColor}\rule{\linewidth}{2pt}\par}
+    \vspace{0.6cm}
+
+    {\huge \bfseries \color{primaryColor}
+    Relatório de Análise de Sistema\\
+    de Base de Dados: Cineteatro\par}
+
+    \vspace{0.4cm}
+
+    {\large \color{secondaryColor}
+    Gestão Integrada de Eventos, Bilheteira, Bar e Recursos Humanos\par}
+
+    \vspace{0.2cm}
+
+    {\color{secondaryColor}\rule{\linewidth}{2pt}\par}
+
+    \vspace{2cm}
+
+    {\Large \textsc{Unidade Curricular de BD}\par}
+
+    \vfill
+
+    \begin{tabular}{rll}
+        \textbf{Grupo P2G9} & Ricardo Carmo   & (112657) \\
+                            & Daniel Oliveira & (115359)
+    \end{tabular}
+
+    \vfill
+
+    {\large \color{textColor!70} \today\par}
+
+    \vspace*{1cm}
+
+\end{titlepage}
+
+\clearpage
+\tableofcontents
+\clearpage
+
+% ==============================================================================
+% CONTEÚDO DO RELATÓRIO
+% ==============================================================================
+
+\section{Resumo Executivo}
+Este relatório resume a conceção e implementação de um sistema integrado para a gestão de um Cineteatro. O sistema inclui gestão de eventos, bilheteira, bar e recursos humanos, suportado por um modelo relacional normalizado e por uma aplicação cliente em WinForms que comunica com o SQL Server através de procedimentos armazenados.
+
+\section{Introdução}
+O trabalho foi realizado no âmbito da unidade curricular de Base de Dados. O objetivo principal foi conceber uma solução fiável e mantível que assegure integridade dos dados, permita operações transaccionadas e ofereça uma interface operacional para utilizadores não técnicos (bilheteira e bar).
+
+\section{Análise de Requisitos}
+
+\subsection{Requisitos Funcionais}
+Os requisitos funcionais detalham os comportamentos, as ações e as operações essenciais que a base de dados deve suportar para satisfazer as necessidades de negócio do Cineteatro:
+\begin{itemize}
+    \item \textbf{Gestão de Pessoas:} Registo unificado de clientes e funcionários com dados pessoais partilhados (NIF, nome, contacto, morada). A herança de dados garante que não haja duplicações de informação básica.
+    \item \textbf{Eventos:} Criação e gestão detalhada de espetáculos, incluindo a sua duração, data e hora, tipo de evento e o local correspondente. Cada evento é modelado de forma a suportar a associação de múltiplos artistas.
+    \item \textbf{Bilheteira:} Emissão, controlo e venda de bilhetes de acesso para eventos específicos. Cada bilhete é processado e emitido por um funcionário específico da bilheteira.
+    \item \textbf{Bar:} Venda de produtos consumíveis no bar do cineteatro, mantendo um registo detalhado de compras indexado por cliente e associado ao funcionário responsável pela transação.
+    \item \textbf{Recursos Humanos:} Atribuição e controlo de funcionários nas respetivas secções, tais como bares específicos e eventos de organização, permitindo gerir as equipas de forma dinâmica.
+\end{itemize}
+
+\subsection{Requisitos Não-Funcionais}
+Os requisitos não-funcionais especificam as qualidades técnicas, restrições, critérios de desempenho e integridade que asseguram o correto funcionamento do sistema:
+\begin{itemize}
+    \item \textbf{Integridade:} Utilização rigorosa de chaves estrangeiras (\textit{Foreign Keys}) para garantir a integridade referencial e a consistência absoluta dos dados entre todas as entidades relacionadas.
+    \item \textbf{Escalabilidade:} Aplicação da diretiva \texttt{IDENTITY} para o auto-incremento de IDs únicos, assegurando que o sistema possa escalar em volume de registos sem conflitos de chaves.
+    \item \textbf{Normalização:} Estruturação de dados em conformidade com a Terceira Forma Normal (3NF), eliminando redundâncias prejudiciais e evitando anomalias de inserção, atualização ou eliminação.
+    \item \textbf{Performance:} Escolha ponderada e otimizada dos tipos de dados (por exemplo, utilização do tipo \texttt{DECIMAL} para preços e valores monetários para evitar erros de arredondamento, e \texttt{VARCHAR} dimensionados adequadamente para texto).
+\end{itemize}
+
+\section{Entidades Principais}
+O modelo de dados baseia-se num conjunto de entidades bem estruturadas que modelam a lógica de negócio do Cineteatro. A tabela seguinte apresenta a listagem das entidades principais e a respetiva descrição funcional das suas responsabilidades no sistema:
+
+\begin{table}[h!]
+\centering
+\caption{Entidades do Sistema e Respetivas Responsabilidades}
+\label{tab:entidades}
+\vspace{0.2cm}
+\renewcommand{\arraystretch}{1.3} % Melhora o espaçamento interno das linhas da tabela
+\small
+\begin{tabular}{ll}
+\toprule
+\textbf{\color{primaryColor}Entidade} & \textbf{\color{primaryColor}Responsabilidade Operacional} \\
+\midrule
+Pessoa      & Repositório de dados pessoais base partilhados (NIF, nome, contacto, morada). \\
+Cliente     & Especialização de Pessoa; armazena o histórico e perfil de consumo. \\
+Funcionário & Especialização de Pessoa; inclui dados de gestão de RH (função, salário). \\
+Evento      & Registo completo de espetáculos com suporte a artistas múltiplos. \\
+Bilhete     & Título de acesso emitido para um evento através de um operador da bilheteira. \\
+Compra      & Registo de transações e consumo de produtos efetuadas nas áreas de bar. \\
+Bar         & Identificação física do ponto de venda e controlo de inventário/stock. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Notas sobre o modelo}
+As entidades foram desenhadas para minimizar redundâncias e garantir que a informação pessoal é partilhada pela entidade `Pessoa` entre `Cliente` e `Funcionário`. As associações principais (FK) garantem rastreabilidade das transações ao cliente/funcionário responsável.
+
+\section{Modelação de Dados}
+
+\subsection{Diagrama Entidade-Relacionamento (DER)}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\textwidth]{DER_Cineteatro_v3.png}
+    \caption{Diagrama Entidade-Relacionamento (DER) do Cineteatro (ficheiro: Images/DER_Cineteatro_v3.png — inserir no directório `Images/`)}
+    \label{fig:der}
+\end{figure}
+
+\newpage
+
+\subsection{Diagrama de Classes / Modelo Relacional (ER)}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\textwidth]{ER_Cineteatro_v3.png}
+    \caption{Diagrama de Esquema Relacional (ER) do Cineteatro (ficheiro: Images/ER_Cineteatro_v3.png — inserir no directório `Images/`)}
+    \label{fig:er}
+\end{figure}
+
+\section{SQL}
+
+Os scripts desenvolvidos para a base de dados podem ser consultados diretamente:
+
+\begin{itemize}
+    \item \href{run:SQL/SQL_Cineteatro.sql}{SQL\_Cineteatro.sql}
+    \item \href{run:SQL/insert_cineteatro.sql}{insert\_cineteatro.sql}
+    \item \href{run:SQL/procedures_cineteatro.sql}{procedures\_cineteatro.sql}
+    \item \href{run:SQL/functions_cineteatro.sql}{functions\_cineteatro.sql}
+    \item \href{run:SQL/triggers.sql}{triggers.sql}
+\end{itemize}
+
+\newpage
+
+\section{Forms}
+
+
+\subsection{Bilheteira}
+
+\begin{figure}[h!]
+    \centering
+    % imagem de interface da bilheteira (não encontrada no repositório)
+    % \includegraphics[width=0.85\textwidth]{Images/PrintsDeBD1.png}
+    \caption{Interface da Bilheteira (inserir print no ficheiro Images/PrintsDeBD1.png).}
+    \label{fig:bilheteira}
+\end{figure}
+
+Nesta secção, é possível vender e remover bilhetes, bem como gerir os eventos associados ao sistema. A implementação baseia-se numa arquitetura desacoplada que utiliza \textit{Stored Procedures} para garantir a integridade dos dados.
+
+\subsubsection{Gestão de Navegação e Dados}
+O formulário principal utiliza um controlo de estado (\texttt{modoAtual}) para alternar dinamicamente a interface entre a visualização de bilhetes e eventos:
+
+\begin{lstlisting}[language={[Sharp]C}, caption=Gestão de estados (excerto)]
+// excerto: alterna modo e actualiza vista
+ExibirBilhetes();
+modoAtual = "Bilhetes";
+// actualizar labels/botoes conforme o modo ativo
+\end{lstlisting}
+
+\subsubsection{Integridade e Remoção de Registos}
+A remoção de dados é protegida por um tratamento de exceções robusto, capaz de capturar erros de integridade referencial (FK) do SQL Server:
+
+\begin{lstlisting}[language={[Sharp]C}, caption=Tratamento de exceções e integridade referencial]
+catch (SqlException ex)
+{
+    if (ex.Number == 547) // Erro de FK
+    {
+        MessageBox.Show("Nao e possivel remover este registo...");
+    }
+    else
+    {
+        MessageBox.Show(ex.Message);
+    }
+}
+\end{lstlisting}
+
+\subsubsection{Processo de Venda de Bilhetes}
+A lógica de venda é encapsulada na \textit{Stored Procedure} \texttt{sp\_ComprarBilhete}. O formulário realiza primeiro validações locais (campos vazios ou tipos incorretos) antes de submeter o pedido à base de dados:
+
+\begin{lstlisting}[language={[Sharp]C}, caption=Venda de bilhete (excerto)]
+// validacoes: evento seleccionado, lugar e recibo válidos
+cmd.CommandType = CommandType.StoredProcedure;
+cmd.Parameters.AddWithValue("@Lugar", LugarInput.Text.Trim());
+cmd.Parameters.AddWithValue("@ID_Evento", (long)EventoInput.SelectedValue);
+// outros parametros (ID_Bilheteira, Data, ID_Recibo)
+cmd.ExecuteNonQuery();
+\end{lstlisting}
+
+
+\newpage
+
+\subsection{Recursos Humanos}
+Esta secção resume a gestão dos funcionários no Cineteatro. O formulário de RH permite consultar a equipa, inserir novos colaboradores e remover registos com controlo de integridade, garantindo que os dados pessoais e profissionais permanecem consistentes.
+
+\subsubsection{Funções principais}
+Os métodos mais importantes são \texttt{CarregarFuncionarios()}, que mostra a equipa na grelha, \texttt{btnAdicionar_Click()}, que abre o formulário de inserção, e \texttt{btnRemover_Click()}, que elimina um funcionário apenas quando a base de dados o permite. O formulário \texttt{AdicionarFuncionario} garante ainda que a criação da pessoa e do funcionário é feita de forma transacional.
+
+\begin{lstlisting}[language={[Sharp]C}, caption=Inserção de funcionário (excerto)]
+// validacoes: campos obrigatorios; NIF e salário com formatos válidos
+cmd.CommandType = CommandType.StoredProcedure;
+cmd.Parameters.AddWithValue("@NIF", nifValor);
+cmd.Parameters.AddWithValue("@Nome", nome.Text.Trim());
+cmd.Parameters.AddWithValue("@Funcao", funcao.Text.Trim());
+cmd.ExecuteNonQuery();
+\end{lstlisting}
+
+\newpage
+
+\subsection{Bar}
+O módulo do Bar é responsável por acompanhar o estado dos balcões, associar funcionários às áreas de venda e registar as transações de produtos. A interface foi desenhada para simplificar a operação diária e manter um histórico atualizado de consumo.
+
+\subsubsection{Funções principais}
+No Bar, \texttt{CarregarBares()} apresenta os registos existentes, \texttt{btnEditar_Click()} permite alterar o estado e o funcionário associado, e \texttt{btnCompras_Click()} abre o formulário \texttt{Venda}. Nesse formulário, \texttt{Venda_Load()} prepara os dados e \texttt{btnVender_Click()} grava a compra através da \textit{Stored Procedure} \texttt{sp\_RegistarCompraBar}.
+
+
+\subsubsection{Venda no Bar}
+A venda de produtos no bar é tratada pelo formulário \texttt{Venda}, que primeiro carrega a lista de produtos, configura os métodos de pagamento e mostra o histórico de transações. Antes de gravar a operação, o código valida o produto, a quantidade e o NIF do cliente, quando este é fornecido.
+
+\begin{lstlisting}[language={[Sharp]C}, caption=Registo de venda no bar (excerto)]
+// preparar parâmetros e executar procedimento que regista compra
+cmd.CommandType = CommandType.StoredProcedure;
+cmd.Parameters.AddWithValue("@ID_Bar", idBar);
+cmd.Parameters.AddWithValue("@CodigoProduto", producto_select.SelectedValue);
+cmd.Parameters.AddWithValue("@Quantidade", (int)numericUpDown1.Value);
+cmd.ExecuteNonQuery();
+\end{lstlisting}
+
+\newpage
+\subsection{Eventos}
+O registo de eventos é um dos pontos mais importantes do sistema, porque combina validações locais com regras garantidas no SQL Server. O formulário liga-se à tabela de edifícios e envia os dados para a \textit{Stored Procedure} que insere o evento.
+
+\begin{lstlisting}[language={[Sharp]C}, caption=Registo de eventos com validação local]
+private void btnGravar_Click(object sender, EventArgs e)
+{
+    if (string.IsNullOrWhiteSpace(NomeInput.Text))
+        return;
+
+    if (!TimeSpan.TryParse(DuracaoInput.Text, out TimeSpan duracao))
+        return;
+
+    using (SqlCommand cmd = new SqlCommand("dbo.sp_AdicionarEvento", conn))
+    {
+        cmd.CommandType = CommandType.StoredProcedure;
+        cmd.Parameters.AddWithValue("@Nome", NomeInput.Text.Trim());
+        ...
+        cmd.ExecuteNonQuery();
+    }
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language={[Sharp]C}, caption=Registo de evento (excerto)]
+// validações locais: Nome e duração válidos
+cmd.CommandType = CommandType.StoredProcedure;
+cmd.Parameters.AddWithValue("@Nome", NomeInput.Text.Trim());
+cmd.Parameters.AddWithValue("@Duracao", duracao);
+cmd.ExecuteNonQuery();
+\end{lstlisting}
+
+
+\section{Conclusão}
+O sistema implementado satisfaz os requisitos funcionais principais e adopta boas práticas de modelação e integridade referencial. A utilização de stored procedures centraliza as regras críticas no servidor, simplificando a lógica de cliente e facilitando auditoria.
+
+
+
+\end{document}
